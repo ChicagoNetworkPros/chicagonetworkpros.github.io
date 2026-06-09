@@ -11,6 +11,7 @@
             --accent-green: #10b981;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
+            --input-bg: #334155;
         }
         
         body {
@@ -53,6 +54,18 @@
             margin: 0 auto 1.5rem auto;
         }
 
+        .contact-info {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .contact-info a {
+            color: var(--accent-green);
+            text-decoration: none;
+        }
+
         .cta-btn {
             display: inline-block;
             background-color: var(--accent-green);
@@ -62,6 +75,7 @@
             border-radius: 6px;
             text-decoration: none;
             transition: transform 0.2s;
+            margin-top: 1rem;
         }
 
         .cta-btn:hover {
@@ -106,9 +120,93 @@
         h2 {
             font-size: 1.75rem;
             font-weight: 700;
+            margin-top: 3rem;
             margin-bottom: 2rem;
             border-left: 4px solid var(--accent-green);
             padding-left: 0.75rem;
+        }
+
+        /* ESTIMATOR WIDGET STYLES */
+        .estimator-box {
+            background-color: var(--card-bg);
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .estimator-box {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .control-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .control-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        .control-group select, .control-group input[type="range"] {
+            width: 100%;
+            background-color: var(--input-bg);
+            border: 1px solid #475569;
+            color: var(--text-main);
+            padding: 0.5rem;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        .range-val {
+            display: inline-block;
+            float: right;
+            color: var(--accent-green);
+            font-weight: 700;
+        }
+
+        .output-panel {
+            background-color: rgba(15, 23, 42, 0.6);
+            border: 1px solid #475569;
+            border-radius: 8px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .output-stat {
+            margin-bottom: 1.25rem;
+        }
+
+        .output-stat:last-child {
+            margin-bottom: 0;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            display: block;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
+        .stat-value.highlight {
+            color: var(--accent-green);
         }
 
         .capabilities-grid {
@@ -152,6 +250,9 @@
         <span class="tag">Chicagoland On-Site Dispatch</span>
         <h1>Chicago Network Pros</h1>
         <p class="subtitle">Commercial IT & Network Infrastructure Services. High-availability smart hands deployment, remediation, and technical rollouts.</p>
+        <div class="contact-info">
+            Direct Line: <a href="tel:7736971292">773-697-1292</a>
+        </div>
         <a href="mailto:dispatch@chicagonetworkpros.com" class="cta-btn">Request Field Dispatch</a>
     </header>
 
@@ -169,6 +270,46 @@
             <div class="metric-card">
                 <div class="metric-num">24/7</div>
                 <div class="metric-label">Emergency Smart Hands</div>
+            </div>
+        </div>
+
+        <!-- INTERACTIVE ESTIMATOR COMMAND CONSOLE -->
+        <h2>Smart Hands Project Scoping Console</h2>
+        <div class="estimator-box">
+            <div class="inputs-panel">
+                <div class="control-group">
+                    <label for="projectScale">Project Environment Type</label>
+                    <select id="projectScale">
+                        <option value="1">Standard IDF Closet (Remote Support)</option>
+                        <option value="1.5">Core MDF Data Center / Rack Overhaul</option>
+                        <option value="2">Multi-Floor Corporate / Warehouse Rollout</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label for="rackCount">Racks to Remediate / Clean <span id="rackVal" class="range-val">1</span></label>
+                    <input type="range" id="rackCount" min="1" max="10" value="1">
+                </div>
+
+                <div class="control-group">
+                    <label for="cableDrops">Structured Cable Drops Needed <span id="cableVal" class="range-val">10</span></label>
+                    <input type="range" id="cableZen" min="0" max="100" step="5" value="10">
+                </div>
+            </div>
+
+            <div class="output-panel">
+                <div class="output-stat">
+                    <span class="stat-label">Estimated On-Site Window</span>
+                    <span id="outHours" class="stat-value highlight">3-5 Hours</span>
+                </div>
+                <div class="output-stat">
+                    <span class="stat-label">Recommended Tech Dispatch Scale</span>
+                    <span id="outCrew" class="stat-value">1 Lead Field Specialist</span>
+                </div>
+                <div class="output-stat">
+                    <span class="stat-label">Essential On-Site Staging Tools</span>
+                    <span id="outTools" class="stat-value" style="font-size: 1.1rem; display: block; margin-top: 0.25rem;">Fluke LinkIQ, Console Rollabout, Labeler</span>
+                </div>
             </div>
         </div>
 
@@ -193,6 +334,61 @@
     <footer>
         <p>&copy; 2026 Chicago Network Pros. All Rights Reserved. Private Independent Contractor Operations.</p>
     </footer>
+
+    <!-- INTERACTIVE ALGORITHM ENGINE -->
+    <script>
+        const scaleSelect = document.getElementById('projectScale');
+        const rackSlider = document.getElementById('rackCount');
+        const cableSlider = document.getElementById('cableZen');
+        
+        const rackValDisplay = document.getElementById('rackVal');
+        const cableValDisplay = document.getElementById('cableVal');
+        
+        const outHours = document.getElementById('outHours');
+        const outCrew = document.getElementById('outCrew');
+        const outTools = document.getElementById('outTools');
+
+        function calculateMetrics() {
+            const scale = parseFloat(scaleSelect.value);
+            const racks = parseInt(rackSlider.value);
+            const cables = parseInt(cableSlider.value);
+
+            // Update range labels dynamically
+            rackValDisplay.innerText = racks;
+            cableValDisplay.innerText = cables;
+
+            // Compute Hours Allocation
+            let baseHours = (racks * 2.5) + (cables * 0.25);
+            let totalHours = Math.round(baseHours * scale);
+            if (totalHours < 3) totalHours = 3; // Minimal dispatch window
+
+            // Format window output
+            outHours.innerText = `${totalHours - 1}-${totalHours + 2} Hours`;
+
+            // Compute Crew Allocation
+            if (totalHours > 16 || racks >= 5 || cables >= 60) {
+                outCrew.innerText = "2-Tech Crew (Lead + Assist)";
+            } else {
+                outCrew.innerText = "1 Lead Field Specialist";
+            }
+
+            // Compute Dynamic Tool Stack
+            let tools = ["Fluke Tester", "Console Rollabout"];
+            if (cables > 20) tools.push("Punchdown Stack", "Velocity Crimper");
+            if (racks >= 3)  tools.push("Labeling System", "Cage Nut Extraction Suite");
+            if (scale === 2) tools.push("10ft A-Frame / Lift Prerequisite");
+
+            outTools.innerText = tools.join(", ");
+        }
+
+        // Attach live listener loops
+        scaleSelect.addEventListener('input', calculateMetrics);
+        rackSlider.addEventListener('input', calculateMetrics);
+        cableSlider.addEventListener('input', calculateMetrics);
+
+        // Run initial calculations on page paint
+        calculateMetrics();
+    </script>
 
 </body>
 </html>
