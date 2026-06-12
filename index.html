@@ -3,261 +3,360 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chicago Network Pros | Onsite Commercial IT Infrastructure</title>
+    <title>Chicago Network Pros | Commercial IT Infrastructure</title>
     <style>
         :root {
-            --bg-dark: #0f172a;
-            --card-bg: #1e293b;
-            --accent-green: #10b981;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --input-bg: #334155;
+            color-scheme: light;
         }
-        
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-main);
+            font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #ffffff;
+            color: #0f172a;
             line-height: 1.6;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
         }
 
+        /* NAV */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(10px) saturate(160%);
+            background: rgba(255,255,255,0.8);
+            border-bottom: 1px solid rgba(15,23,42,0.06);
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0.9rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .brand {
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #0f172a;
+            text-decoration: none;
+            font-size: 1.05rem;
+        }
+        .nav-actions { display:flex; align-items:center; gap:0.75rem; }
+        .nav-pill {
+            color: #334155;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 0.35rem 0.6rem;
+            border-radius: 9999px;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+        .nav-pill:hover { background: #f8fafc; color: #0f172a; }
+        .nav-cta {
+            background: #0f172a;
+            color: #ffffff;
+            padding: 0.55rem 1rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            box-shadow: 0 10px 25px rgba(15,23,42,0.15);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 14px 30px rgba(15,23,42,0.18); }
+
+        /* HERO */
         header {
-            padding: 3rem 1.5rem;
-            text-align: center;
-            border-bottom: 1px solid #334155;
-            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(1200px circle at 10% -20%, rgba(16,185,129,0.12), transparent 40%),
+                radial-gradient(1000px circle at 90% -10%, rgba(15,23,42,0.06), transparent 40%),
+                #ffffff;
         }
-
-        .tag {
-            background-color: rgba(16, 185, 129, 0.1);
-            color: var(--accent-green);
-            padding: 0.25rem 0.75rem;
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 1.25rem 4.5rem;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #ecfdf5;
+            color: #047857;
+            border: 1px solid #a7f3d0;
+            padding: 0.35rem 0.8rem;
             border-radius: 9999px;
             font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            font-weight: 700;
+            letter-spacing: 0.02em;
         }
-
         h1 {
-            font-size: 2.5rem;
-            margin: 1rem 0 0.5rem 0;
-            font-weight: 800;
-            letter-spacing: -0.025em;
+            font-size: clamp(2.4rem, 5vw, 3.6rem);
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            line-height: 1.05;
+            margin: 1rem 0 0.75rem;
         }
-
         .subtitle {
-            color: var(--text-muted);
+            color: #475569;
             font-size: 1.15rem;
-            max-width: 600px;
-            margin: 0 auto 1.5rem auto;
+            max-width: 640px;
+            margin: 0 0 1.75rem;
         }
-
-        .contact-info {
-            margin-top: 1rem;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--text-main);
-        }
-
-        .contact-info a {
-            color: var(--accent-green);
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #0f172a;
+            color: #ffffff;
+            padding: 0.85rem 1.25rem;
+            border-radius: 9999px;
             text-decoration: none;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            background-color: var(--accent-green);
-            color: #000;
             font-weight: 700;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            transition: transform 0.2s;
-            margin-top: 1rem;
+            box-shadow: 0 18px 40px rgba(15,23,42,0.18);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-
-        .cta-btn:hover {
-            transform: translateY(-2px);
+        .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 22px 45px rgba(15,23,42,0.22); }
+        .hero-contact {
+            margin-top: 1.25rem;
+            font-weight: 700;
+            color: #0f172a;
         }
+        .hero-contact a { color: #059669; text-decoration: none; font-weight: 800; }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-        }
+        /* CONTAINER */
+        .container { max-width: 1200px; margin: 0 auto; padding: 2.5rem 1.25rem; }
 
+        /* METRICS */
         .metrics-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 4rem;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.25rem;
+            margin-top: 2.5rem;
         }
-
+        @media (max-width: 720px) { .metrics-grid { grid-template-columns: 1fr; } }
         .metric-card {
-            background-color: var(--card-bg);
-            padding: 2rem;
-            border-radius: 8px;
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            padding: 1.75rem;
+            border-radius: 1rem;
             text-align: center;
-            border: 1px solid #334155;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 30px rgba(15,23,42,0.06);
+            position: relative;
+            overflow: hidden;
         }
-
+        .metric-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 50%), rgba(16,185,129,0.10), transparent 40%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+        .metric-card:hover::before { opacity: 1; }
         .metric-num {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--accent-green);
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: #059669;
             line-height: 1;
             margin-bottom: 0.5rem;
+            letter-spacing: -0.03em;
         }
-
         .metric-label {
-            color: var(--text-muted);
+            color: #475569;
             font-size: 0.95rem;
             font-weight: 600;
         }
 
+        /* SECTION HEADING */
         h2 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin-top: 3rem;
-            margin-bottom: 2rem;
-            border-left: 4px solid var(--accent-green);
-            padding-left: 0.75rem;
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin: 3rem 0 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        h2::before {
+            content: "";
+            height: 14px;
+            width: 4px;
+            border-radius: 9999px;
+            background: #10b981;
+            opacity: 0.85;
         }
 
-        /* ESTIMATOR WIDGET STYLES */
+        /* ESTIMATOR */
         .estimator-box {
-            background-color: var(--card-bg);
-            border: 1px solid #334155;
-            border-radius: 12px;
-            padding: 2rem;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 1.75rem;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 4rem;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 1.75rem;
+            box-shadow: 0 20px 50px rgba(15,23,42,0.08);
         }
-
-        @media (max-width: 768px) {
-            .estimator-box {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .control-group {
-            margin-bottom: 1.5rem;
-        }
-
+        @media (max-width: 860px) { .estimator-box { grid-template-columns: 1fr; } }
+        .control-group { margin-bottom: 1.4rem; }
         .control-group label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-            color: var(--text-main);
-        }
-
-        .control-group select, .control-group input[type="range"] {
-            width: 100%;
-            background-color: var(--input-bg);
-            border: 1px solid #475569;
-            color: var(--text-main);
-            padding: 0.5rem;
-            border-radius: 6px;
-            box-sizing: border-box;
-        }
-
-        .range-val {
-            display: inline-block;
-            float: right;
-            color: var(--accent-green);
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
             font-weight: 700;
+            margin-bottom: 0.45rem;
+            font-size: 0.95rem;
+            color: #0f172a;
         }
+        .range-val {
+            color: #059669;
+            font-weight: 800;
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* FORM ELEMENTS */
+        select, input[type="range"] {
+            width: 100%;
+            background-color: #ffffff;
+            border: 1px solid #cbd5e1;
+            color: #0f172a;
+            padding: 0.6rem 0.75rem;
+            border-radius: 0.6rem;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        select:focus {
+            border-color: #10b981;
+            box-shadow: 0 0 0 3px rgba(16,185,129,0.15);
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            height: 6px;
+            padding: 0;
+            background: #e2e8f0;
+            border: none;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 18px;
+            width: 18px;
+            border-radius: 9999px;
+            background: #0f172a;
+            border: 2px solid #ffffff;
+            box-shadow: 0 6px 18px rgba(15,23,42,0.25);
+            cursor: pointer;
+            transition: transform 0.15s ease;
+        }
+        input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.05); }
 
         .output-panel {
-            background-color: rgba(15, 23, 42, 0.6);
-            border: 1px solid #475569;
-            border-radius: 8px;
+            background: linear-gradient(180deg, #f8fafc, #ffffff);
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
             padding: 1.5rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-
-        .output-stat {
-            margin-bottom: 1.25rem;
-        }
-
-        .output-stat:last-child {
-            margin-bottom: 0;
-        }
-
+        .output-stat { margin-bottom: 1.25rem; }
+        .output-stat:last-child { margin-bottom: 0; }
         .stat-label {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
-            color: var(--text-muted);
-            letter-spacing: 0.05em;
+            color: #64748b;
+            letter-spacing: 0.08em;
             display: block;
+            font-weight: 700;
         }
-
         .stat-value {
-            font-size: 1.5rem;
+            font-size: 1.35rem;
             font-weight: 800;
-            color: var(--text-main);
+            color: #0f172a;
+            letter-spacing: -0.01em;
         }
+        .stat-value.highlight { color: #059669; }
 
-        .stat-value.highlight {
-            color: var(--accent-green);
-        }
-
+        /* CAPABILITIES */
         .capabilities-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.25rem;
         }
-
+        @media (max-width: 900px) { .capabilities-grid { grid-template-columns: 1fr; } }
         .cap-card {
-            background-color: var(--card-bg);
-            padding: 1.75rem;
-            border-radius: 8px;
-            border: 1px solid #334155;
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 14px 35px rgba(15,23,42,0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
+        .cap-card:hover { transform: translateY(-3px); box-shadow: 0 22px 45px rgba(15,23,42,0.10); }
+        .cap-card h3 { margin-top: 0; font-size: 1.15rem; color: #0f172a; font-weight: 800; }
+        .cap-card p { color: #475569; margin-bottom: 0; font-size: 0.95rem; }
 
-        .cap-card h3 {
-            margin-top: 0;
-            font-size: 1.25rem;
-            color: var(--text-main);
-        }
-
-        .cap-card p {
-            color: var(--text-muted);
-            margin-bottom: 0;
-            font-size: 0.95rem;
-        }
-
+        /* FOOTER */
         footer {
             text-align: center;
-            padding: 3rem 1.5rem;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            border-top: 1px solid #334155;
-            background-color: #0b111e;
+            padding: 2.5rem 1.25rem;
+            color: #64748b;
+            font-size: 0.85rem;
+            border-top: 1px solid #e2e8f0;
+            background: #ffffff;
+        }
+
+        /* SUBTLE SECTION DIVIDER */
+        .section-divider {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+        .section-divider hr {
+            border: none;
+            border-top: 1px solid #e2e8f0;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <span class="tag">Chicagoland On-Site Dispatch</span>
-        <h1>Chicago Network Pros</h1>
-        <p class="subtitle">Commercial IT & Network Infrastructure Services. High-availability smart hands deployment, remediation, and technical rollouts.</p>
-        <div class="contact-info">
-            Direct Line: <a href="tel:7736971292">773-697-1292</a>
+    <nav>
+        <div class="nav-inner">
+            <a class="brand" href="#">Chicago Network Pros</a>
+            <div class="nav-actions">
+                <a class="nav-pill" href="#capabilities">Services</a>
+                <a class="nav-cta" href="mailto:dispatch@chicagonetworkpros.com">Request Field Dispatch</a>
+            </div>
         </div>
-        <a href="mailto:dispatch@chicagonetworkpros.com" class="cta-btn">Request Field Dispatch</a>
+    </nav>
+
+    <header>
+        <div class="hero-inner">
+            <span class="badge">Chicagoland On-Site Dispatch</span>
+            <h1>Commercial IT &amp; Network<br>Infrastructure Services</h1>
+            <p class="subtitle">
+                High-availability smart hands deployment, remediation, and technical rollouts—delivered with precision when site reliability matters most.
+            </p>
+            <a href="mailto:dispatch@chicagonetworkpros.com" class="hero-cta">
+                Start a project
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <div class="hero-contact">
+                Direct Line: <a href="tel:7736971292">773-697-1292</a>
+            </div>
+        </div>
     </header>
 
-    <div class="container">
-        <!-- TRUST METRICS -->
+    <main class="container">
+
         <div class="metrics-grid">
             <div class="metric-card">
                 <div class="metric-num">500+</div>
@@ -273,7 +372,6 @@
             </div>
         </div>
 
-        <!-- INTERACTIVE ESTIMATOR COMMAND CONSOLE -->
         <h2>Smart Hands Project Scoping Console</h2>
         <div class="estimator-box">
             <div class="inputs-panel">
@@ -285,7 +383,7 @@
                         <option value="2">Multi-Floor Corporate / Warehouse Rollout</option>
                     </select>
                 </div>
-                
+
                 <div class="control-group">
                     <label for="rackCount">Racks to Remediate / Clean <span id="rackVal" class="range-val">1</span></label>
                     <input type="range" id="rackCount" min="1" max="10" value="1">
@@ -308,13 +406,12 @@
                 </div>
                 <div class="output-stat">
                     <span class="stat-label">Essential On-Site Staging Tools</span>
-                    <span id="outTools" class="stat-value" style="font-size: 1.1rem; display: block; margin-top: 0.25rem;">Fluke LinkIQ, Console Rollabout, Labeler</span>
+                    <span id="outTools" class="stat-value" style="font-size: 1.05rem; display: block; margin-top: 0.25rem;">Fluke LinkIQ, Console Rollabout, Labeler</span>
                 </div>
             </div>
         </div>
 
-        <!-- CORE COMPETENCIES -->
-        <h2>Core Capabilities</h2>
+        <h2 id="capabilities">Core Capabilities</h2>
         <div class="capabilities-grid">
             <div class="cap-card">
                 <h3>Network Deployment &amp; Remediation</h3>
@@ -329,21 +426,21 @@
                 <p>Structured infrastructure execution for retail, logistics warehouses, and corporate branch office spaces. Scalable execution according to precise SOW guidelines.</p>
             </div>
         </div>
-    </div>
+
+    </main>
 
     <footer>
         <p>&copy; 2026 Chicago Network Pros. All Rights Reserved. Private Independent Contractor Operations.</p>
     </footer>
 
-    <!-- INTERACTIVE ALGORITHM ENGINE -->
     <script>
         const scaleSelect = document.getElementById('projectScale');
         const rackSlider = document.getElementById('rackCount');
         const cableSlider = document.getElementById('cableZen');
-        
+
         const rackValDisplay = document.getElementById('rackVal');
         const cableValDisplay = document.getElementById('cableVal');
-        
+
         const outHours = document.getElementById('outHours');
         const outCrew = document.getElementById('outCrew');
         const outTools = document.getElementById('outTools');
@@ -353,41 +450,42 @@
             const racks = parseInt(rackSlider.value);
             const cables = parseInt(cableSlider.value);
 
-            // Update range labels dynamically
             rackValDisplay.innerText = racks;
             cableValDisplay.innerText = cables;
 
-            // Compute Hours Allocation
             let baseHours = (racks * 2.5) + (cables * 0.25);
             let totalHours = Math.round(baseHours * scale);
-            if (totalHours < 3) totalHours = 3; // Minimal dispatch window
+            if (totalHours < 3) totalHours = 3;
 
-            // Format window output
             outHours.innerText = `${totalHours - 1}-${totalHours + 2} Hours`;
 
-            // Compute Crew Allocation
             if (totalHours > 16 || racks >= 5 || cables >= 60) {
                 outCrew.innerText = "2-Tech Crew (Lead + Assist)";
             } else {
                 outCrew.innerText = "1 Lead Field Specialist";
             }
 
-            // Compute Dynamic Tool Stack
             let tools = ["Fluke Tester", "Console Rollabout"];
             if (cables > 20) tools.push("Punchdown Stack", "Velocity Crimper");
-            if (racks >= 3)  tools.push("Labeling System", "Cage Nut Extraction Suite");
+            if (racks >= 3) tools.push("Labeling System", "Cage Nut Extraction Suite");
             if (scale === 2) tools.push("10ft A-Frame / Lift Prerequisite");
 
             outTools.innerText = tools.join(", ");
         }
 
-        // Attach live listener loops
         scaleSelect.addEventListener('input', calculateMetrics);
         rackSlider.addEventListener('input', calculateMetrics);
         cableSlider.addEventListener('input', calculateMetrics);
-
-        // Run initial calculations on page paint
         calculateMetrics();
+
+        // Soft card glow on mouse move
+        document.querySelectorAll('.metric-card').forEach((card) => {
+            card.addEventListener('pointermove', (e) => {
+                const rect = card.getBoundingClientRect();
+                card.style.setProperty('--mx', `${((e.clientX - rect.left) / rect.width) * 100}%`);
+                card.style.setProperty('--my', `${((e.clientY - rect.top) / rect.height) * 100}%`);
+            });
+        });
     </script>
 
 </body>
