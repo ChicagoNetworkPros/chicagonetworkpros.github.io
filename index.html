@@ -8,13 +8,15 @@
     <meta name="keywords" content="Chicago IT services, enterprise IT Chicago IL, data center services Chicago, structured cabling Chicago, wireless deployment Chicago, networking Chicago, audio visual Chicago, electrical services Chicago, IT staffing Chicago, edge deployment Chicago, IoT Chicago, POS deployment Chicago, emergency IT response Chicago, smart hands Chicago, field services Chicago, Chicago Network Pros">
     <meta name="author" content="Chicago Network Pros">
     <meta name="robots" content="index, follow">
+    
+    <meta name="google-site-verification" content="2JNpTw9VZpDMlaY_xrkSVXt65eURDvrOX22SmNERdfw" />
+    
     <meta name="geo.region" content="US-IL">
     <meta name="geo.placename" content="Chicago">
     <meta name="geo.position" content="41.8781;-87.6298">
     <meta name="ICBM" content="41.8781, -87.6298">
     <link rel="canonical" href="https://chicagonetworkpros.github.io/">
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Chicago Network Pros | Enterprise IT Infrastructure Services Chicago IL">
     <meta property="og:description" content="Enterprise IT and network infrastructure services in Chicago IL: data centers, cabling, wireless, networking, AV, electrical, IoT/POS, and IT staffing. 24/7 emergency dispatch available.">
     <meta property="og:type" content="website">
@@ -25,7 +27,6 @@
     <meta name="twitter:title" content="Chicago Network Pros | Enterprise IT Services Chicago IL">
     <meta name="twitter:description" content="Enterprise IT infrastructure services in Chicago IL: data center, cabling, wireless, networking, AV, electrical, edge/IoT, and staffing. 24/7 local dispatch.">
 
-    <!-- JSON-LD Local Business -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -398,7 +399,7 @@
         /* FOOTER */
         footer {
             text-align: center;
-            padding: 2.5rem 1.rem;
+            padding: 2.5rem 1rem;
             color: #64748b;
             font-size: 0.85rem;
             border-top: 1px solid #e2e8f0;
@@ -445,7 +446,6 @@
 
     <main class="container">
 
-        <!-- TRUST METRICS -->
         <div class="metrics-grid">
             <div class="metric-card">
                 <div class="metric-num">500+</div>
@@ -461,8 +461,7 @@
             </div>
         </div>
 
-        <!-- FEATURED SERVICES -->
-        <h2>Services</h2>
+        <h2 id="services">Services</h2>
         <p class="section-lead">Enterprise IT infrastructure services across the full data center to edge stack in Chicago IL.</p>
         <div class="featured-services">
             <div class="featured-card">
@@ -515,7 +514,6 @@
             </div>
         </div>
 
-        <!-- ESTIMATOR -->
         <h2>Chicago IT Project Scoping Console</h2>
         <p class="section-lead">Estimate onsite time, crew sizing, and tooling for enterprise infrastructure projects across Chicago IL.</p>
         <div class="estimator-box">
@@ -535,7 +533,7 @@
                 </div>
 
                 <div class="control-group">
-                    <label for="cableDrops">Structured Cable Drops Needed <span id="cableVal" class="range-val">10</span></label>
+                    <label for="cableZen">Structured Cable Drops Needed <span id="cableVal" class="range-val">10</span></label>
                     <input type="range" id="cableZen" min="0" max="100" step="5" value="10">
                 </div>
             </div>
@@ -556,7 +554,6 @@
             </div>
         </div>
 
-        <!-- VERTICALS -->
         <h2>Industry Expertise</h2>
         <p class="section-lead">Proven infrastructure support across core Chicago-area verticals.</p>
         <div class="verticals-grid" aria-label="Industries">
@@ -578,7 +575,6 @@
             <div class="vertical-pill">Telecom</div>
         </div>
 
-        <!-- METHODOLOGY -->
         <h2>Enterprise Delivery Methodology</h2>
         <p class="section-lead">A standardized, scalable execution model for consistent delivery from single-site to multi-thousand-location programs.</p>
         <div class="services-grid">
@@ -620,7 +616,7 @@
             let totalHours = Math.round(baseHours * scale);
             if (totalHours < 3) totalHours = 3;
 
-            outHours.innerText = `${totalHours - 1}-${totalHours + 2} Hours`;
+            outHours.innerText = `${(totalHours - 1)}-${(totalHours + 2)} Hours`;
 
             if (totalHours > 16 || racks >= 5 || cables >= 60) {
                 outCrew.innerText = "2-Tech Crew (Lead + Assist)";
@@ -639,8 +635,11 @@
         scaleSelect.addEventListener('input', calculateMetrics);
         rackSlider.addEventListener('input', calculateMetrics);
         cableSlider.addEventListener('input', calculateMetrics);
+        
+        // Initial build calculation on load
         calculateMetrics();
 
+        // Mouse overlay effect logic for card grids
         document.querySelectorAll('.metric-card').forEach((card) => {
             card.addEventListener('pointermove', (e) => {
                 const rect = card.getBoundingClientRect();
