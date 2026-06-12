@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chicago Network Pros | Enterprise IT & Network Infrastructure Services in Chicago IL</title>
-    <meta name="description" content="Chicago Network Pros delivers enterprise IT infrastructure services in Chicago IL: data center build-out, structured cabling, wireless, networking, audio visual, electrical, edge/IoT/POS, IT staffing, and 24/7 smart hands dispatch.">
+    <title>Chicago Network Pros | Enterprise IT &amp; Network Infrastructure Services in Chicago IL</title>
+    <meta name="description" content="Chicago Network Pros delivers enterprise IT and network infrastructure services in Chicago IL: data center build-out, structured cabling, wireless, networking, audio visual, electrical, edge/IoT/POS, IT staffing, and 24/7 smart hands dispatch.">
     <meta name="keywords" content="Chicago IT services, enterprise IT Chicago IL, data center services Chicago, structured cabling Chicago, wireless deployment Chicago, networking Chicago, audio visual Chicago, electrical services Chicago, IT staffing Chicago, edge deployment Chicago, IoT Chicago, POS deployment Chicago, emergency IT response Chicago, smart hands Chicago, field services Chicago, Chicago Network Pros">
     <meta name="author" content="Chicago Network Pros">
     <meta name="robots" content="index, follow">
@@ -339,7 +339,7 @@
         }
         .stat-value.highlight { color: #059669; }
 
-        /* SERVICES */
+        /* SERVICES / CAPABILITIES */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -357,6 +357,25 @@
         .service-card:hover { transform: translateY(-3px); box-shadow: 0 22px 45px rgba(15,23,42,0.10); }
         .service-card h3 { margin-top: 0; font-size: 1.15rem; color: #0f172a; font-weight: 800; }
         .service-card p { color: #475569; margin-bottom: 0; font-size: 0.95rem; }
+
+        /* HOME FEATURED SERVICES */
+        .featured-services {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.25rem;
+        }
+        @media (max-width: 860px) { .featured-services { grid-template-columns: 1fr; } }
+        .featured-card {
+            background: linear-gradient(180deg, #ffffff, #f8fafc);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 14px 30px rgba(15,23,42,0.05);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .featured-card:hover { transform: translateY(-2px); box-shadow: 0 20px 40px rgba(15,23,42,0.10); }
+        .featured-card h3 { margin-top: 0; font-size: 1.1rem; color: #0f172a; font-weight: 800; }
+        .featured-card p { color: #475569; font-size: 0.95rem; }
 
         /* VERTICALS */
         .verticals-grid {
@@ -379,11 +398,19 @@
         /* FOOTER */
         footer {
             text-align: center;
-            padding: 2.5rem 1.25rem;
+            padding: 2.5rem 1.rem;
             color: #64748b;
             font-size: 0.85rem;
             border-top: 1px solid #e2e8f0;
             background: #ffffff;
+        }
+
+        /* SMALL HELPERS */
+        .section-lead {
+            color: #475569;
+            margin-top: -1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
         }
     </style>
 </head>
@@ -418,6 +445,7 @@
 
     <main class="container">
 
+        <!-- TRUST METRICS -->
         <div class="metrics-grid">
             <div class="metric-card">
                 <div class="metric-num">500+</div>
@@ -433,10 +461,63 @@
             </div>
         </div>
 
+        <!-- FEATURED SERVICES -->
+        <h2>Services</h2>
+        <p class="section-lead">Enterprise IT infrastructure services across the full data center to edge stack in Chicago IL.</p>
+        <div class="featured-services">
+            <div class="featured-card">
+                <h3>Data Center Services</h3>
+                <p>AI-ready and hyperscale data center build-out, cabling, and infrastructure services for Chicago facilities, including MDF/IDF optimization and rack builds.</p>
+            </div>
+            <div class="featured-card">
+                <h3>Structured Cabling</h3>
+                <p>Fiber and copper structured cabling solutions spanning Chicago data centers, offices, warehouses, and edge locations with certified testing.</p>
+            </div>
+            <div class="featured-card">
+                <h3>Wireless Deployment</h3>
+                <p>Enterprise wireless networking: site survey, AP mounting, PoE provisioning, SSID staging, RF validation, and optimization across Chicago IL.</p>
+            </div>
+            <div class="featured-card">
+                <h3>Networking</h3>
+                <p>Advanced wireless infrastructure, SD-WAN deployment, and gateway installations for resilient connectivity across Chicago facilities.</p>
+            </div>
+            <div class="featured-card">
+                <h3>Audio Visual</h3>
+                <p>Video conferencing deployment, digital signage, and meeting room AV integration for Chicago offices and enterprise environments.</p>
+            </div>
+            <div class="featured-card">
+                <h3>Electrical Services</h3>
+                <p>Electrical design and deployment including high-voltage systems, power distribution, and EV charging station installation for Chicago IT environments.</p>
+            </div>
+            <div class="featured-card">
+                <h3>Edge / IoT / POS</h3>
+                <p>Deployment of edge technology, IoT sensors, end-user devices, digital signage, POS systems, and video conferencing at Chicago retail, warehouse, and office sites.</p>
+            </div>
+            <div class="featured-card">
+                <h3>IT Staffing</h3>
+                <p>Rapid, skills-focused IT recruitment and field technician placement for Chicago-area projects, from cable crews to installers.</p>
+            </div>
+            <div class="featured-card">
+                <h3>Network Deployment &amp; Remediation</h3>
+                <p>Full-stack physical layout optimization, firewall/switch/PBX installation, demarcation, and remediation for Chicago commercial and data center environments.</p>
+            </div>
+            <div class="featured-card">
+                <h3>Commercial Smart Hands</h3>
+                <p>On-site tactical support for Chicago project teams: rack cleanup, hardware swaps, loop isolation, emergency break-fix, and hands-on escalation support.</p>
+            </div>
+            <div class="featured-card">
+                <h3>Multi-Site Rollouts</h3>
+                <p>Structured infrastructure execution for Chicago retail chains, logistics warehouses, and branch offices with scalable SOW compliance and repeatable playbooks.</p>
+            </div>
+            <div class="featured-card">
+                <h3>Equipment Install, Removal &amp; Relocation</h3>
+                <p>Professional install, decommission, relocation, and asset tracking for servers, network gear, and telecom equipment in Chicago facilities.</p>
+            </div>
+        </div>
+
+        <!-- ESTIMATOR -->
         <h2>Chicago IT Project Scoping Console</h2>
-        <p style="color:#475569; margin-top:-1rem; margin-bottom:1.5rem;">
-            Estimate onsite time, crew sizing, and tooling for enterprise infrastructure projects across Chicago IL.
-        </p>
+        <p class="section-lead">Estimate onsite time, crew sizing, and tooling for enterprise infrastructure projects across Chicago IL.</p>
         <div class="estimator-box">
             <div class="inputs-panel">
                 <div class="control-group">
@@ -475,65 +556,9 @@
             </div>
         </div>
 
-        <h2 id="services">Enterprise IT Services in Chicago IL</h2>
-        <p style="color:#475569; margin-top:-1rem; margin-bottom:1.5rem;">
-            End-to-end IT infrastructure services for enterprise and commercial clients in Chicago—executed in the field by local technicians.
-        </p>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Data Center Services</h3>
-                <p>AI-ready and hyperscale data center build-out, cabling, and infrastructure services for Chicago facilities. MDF/IDF optimization, rack builds, power mapping, and QA.</p>
-            </div>
-            <div class="service-card">
-                <h3>Structured Cabling</h3>
-                <p>Fiber and copper structured cabling solutions spanning Chicago data centers, offices, warehouses, and edge locations. Certified testing and documentation included.</p>
-            </div>
-            <div class="service-card">
-                <h3>Wireless Deployment</h3>
-                <p>Enterprise wireless networking: site survey, AP mounting, PoE provisioning, SSID staging, RF validation, and coverage optimization throughout Chicago IL.</p>
-            </div>
-            <div class="service-card">
-                <h3>Networking</h3>
-                <p>Advanced wireless infrastructure, SD-WAN deployment, and gateway installations; resilient connectivity between Chicago facilities, people, and systems.</p>
-            </div>
-            <div class="service-card">
-                <h3>Audio Visual</h3>
-                <p>Video conferencing system deployment, digital signage, and meeting room AV integration to improve communication and operational efficiency in Chicago offices.</p>
-            </div>
-            <div class="service-card">
-                <h3>Electrical Services</h3>
-                <p>Electrical design and deployment including high-voltage systems, power distribution, and EV charging station installation for Chicago IT environments.</p>
-            </div>
-            <div class="service-card">
-                <h3>Edge / IoT / POS</h3>
-                <p>Deployment of edge technology, IoT sensors, end-user devices, digital signage, POS systems, and video conferencing at Chicago retail, warehouse, and office sites.</p>
-            </div>
-            <div class="service-card">
-                <h3>IT Staffing</h3>
-                <p>Rapid, skills-focused IT recruitment and field technician placement for Chicago-area projects—cable crews, installers, and support specialists on demand.</p>
-            </div>
-            <div class="service-card">
-                <h3>Network Deployment &amp; Remediation</h3>
-                <p>Full-stack physical layout optimization, firewall/switch/PBX installation, demarcation, and remediation for Chicago commercial and data center environments.</p>
-            </div>
-            <div class="service-card">
-                <h3>Commercial Smart Hands</h3>
-                <p>On-site tactical support for Chicago project teams: rack cleanup, hardware swaps, loop isolation, emergency break-fix, and hands-on escalation support.</p>
-            </div>
-            <div class="service-card">
-                <h3>Multi-Site Rollouts</h3>
-                <p>Structured infrastructure execution for Chicago retail chains, logistics warehouses, and branch offices with scalable SOW compliance and repeatable playbooks.</p>
-            </div>
-            <div class="service-card">
-                <h3>Equipment Install, Removal &amp; Relocation</h3>
-                <p>Professional install, decommission, relocation, and asset tracking for servers, network gear, and telecom equipment in Chicago facilities.</p>
-            </div>
-        </div>
-
+        <!-- VERTICALS -->
         <h2>Industry Expertise</h2>
-        <p style="color:#475569; margin-top:-1rem; margin-bottom:1.5rem;">
-            Proven infrastructure support across core Chicago-area verticals.
-        </p>
+        <p class="section-lead">Proven infrastructure support across core Chicago-area verticals.</p>
         <div class="verticals-grid" aria-label="Industries">
             <div class="vertical-pill">Aerospace</div>
             <div class="vertical-pill">Automotive</div>
@@ -553,10 +578,9 @@
             <div class="vertical-pill">Telecom</div>
         </div>
 
-        <h2 style="margin-top:3rem;">Enterprise Delivery Methodology</h2>
-        <p style="color:#475569; margin-top:-1rem; margin-bottom:1.5rem;">
-            A standardized, scalable execution model for consistent delivery from single-site to multi-thousand-location programs.
-        </p>
+        <!-- METHODOLOGY -->
+        <h2>Enterprise Delivery Methodology</h2>
+        <p class="section-lead">A standardized, scalable execution model for consistent delivery from single-site to multi-thousand-location programs.</p>
         <div class="services-grid">
             <div class="service-card"><h3>Initial Consultation &amp; Survey</h3><p>Requirements review, site assessment, and infrastructure planning with Chicago-based deployment teams.</p></div>
             <div class="service-card"><h3>Centralized Project Management</h3><p>Program governance, scheduling, and communications aligned to enterprise milestones and compliance needs.</p></div>
