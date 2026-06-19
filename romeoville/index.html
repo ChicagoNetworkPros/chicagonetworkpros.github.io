@@ -50,6 +50,8 @@
         "@type": "City",
         "name": "Romeoville"
       },
+
+
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Enterprise IT and Infrastructure Services",
@@ -111,6 +113,8 @@
           @apply opacity-100;
         }
       }
+
+
       input[type="range"] {
         -webkit-appearance: none;
         appearance: none;
@@ -151,11 +155,11 @@
 <body class="font-sans text-slate-900 leading-relaxed antialiased">
 
     <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-5 py-3.5 flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-6 py-3.5 flex items-center justify-between">
             <a class="font-extrabold tracking-tight text-slate-900 text-lg no-underline" href="#">Chicago Network Pros</a>
             <div class="hidden md:flex items-center gap-3">
                 <a class="text-slate-600 font-semibold text-sm px-3 py-1.5 rounded-full hover:bg-slate-50 hover:text-slate-900 transition-colors no-underline" href="#services">Services</a>
-                <a class="bg-slate-900 text-white px-4 py-2.5 rounded-full font-bold text-sm shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all no-underline" href="mailto:dispatch@chicagonetworkpros.com">Request Field Dispatch</a>
+                <a class="bg-brand-600 text-white px-4 py-2 rounded-full font-semibold text-sm shadow-sm hover:bg-brand-700 transition-all no-underline" href="mailto:dispatch@chicagonetworkpros.com">Request Field Dispatch</a>
             </div>
             <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Open menu">
                 <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -164,6 +168,8 @@
             </button>
         </div>
     </nav>
+
+
 
     <!-- Mobile drawer overlay -->
     <div id="drawerOverlay" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
@@ -183,11 +189,11 @@
 
 
 
-    <header class="relative overflow-hidden" style="background: radial-gradient(1200px circle at 10% -20%, rgba(16,185,129,0.12), transparent 40%), radial-gradient(1000px circle at 90% -10%, rgba(15,23,42,0.06), transparent 40%), #ffffff;">
-        <div class="max-w-7xl mx-auto px-5 py-20 lg:py-24">
-            <span class="inline-flex items-center gap-2 bg-brand-50 text-brand-700 border border-brand-200 px-3 py-1.5 rounded-full text-sm font-bold tracking-wide">I-55 Distribution & Logistics IT</span>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-none mt-4 mb-3">Enterprise IT Infrastructure Services in Romeoville IL</h1>
-            <p class="text-slate-600 text-lg max-w-3xl mb-7">
+    <header class="bg-white border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+            <span class="inline-flex items-center gap-2 bg-brand-50 text-brand-700 border border-brand-100 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase">I-55 Distribution & Logistics IT</span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mt-4 mb-4">Enterprise IT Infrastructure Services in Romeoville IL</h1>
+            <p class="text-slate-500 text-lg max-w-3xl mb-8 leading-relaxed">
                 Romeoville sits at the heart of the I-55 logistics corridor with millions of square feet of active distribution space. Our crews deploy warehouse networking, automated system cabling, and IoT infrastructure across Will County's rapidly expanding industrial footprint.
             </p>
             <a href="mailto:dispatch@chicagonetworkpros.com" class="inline-flex items-center gap-2 bg-slate-900 text-white px-5 py-3.5 rounded-full font-bold shadow-xl hover:-translate-y-0.5 hover:shadow-2xl transition-all no-underline">
@@ -202,84 +208,89 @@
 
 
 
-    <main class="max-w-7xl mx-auto px-5 py-10">
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
-            <div class="card-glow bg-gradient-to-b from-white to-slate-50 p-7 rounded-xl text-center border border-slate-200 shadow-md">
+
+    <main class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
+            <div class="card-glow bg-white p-7 rounded-2xl text-center border border-slate-100 shadow-sm">
                 <div class="text-4xl font-black text-brand-600 leading-none mb-2 tracking-tight">500+</div>
                 <div class="text-slate-600 text-sm font-semibold">Completed Work Orders</div>
             </div>
-            <div class="card-glow bg-gradient-to-b from-white to-slate-50 p-7 rounded-xl text-center border border-slate-200 shadow-md">
+            <div class="card-glow bg-white p-7 rounded-2xl text-center border border-slate-100 shadow-sm">
                 <div class="text-4xl font-black text-brand-600 leading-none mb-2 tracking-tight">10+ Yrs</div>
                 <div class="text-slate-600 text-sm font-semibold">Enterprise Field Services</div>
             </div>
-            <div class="card-glow bg-gradient-to-b from-white to-slate-50 p-7 rounded-xl text-center border border-slate-200 shadow-md">
+            <div class="card-glow bg-white p-7 rounded-2xl text-center border border-slate-100 shadow-sm">
                 <div class="text-4xl font-black text-brand-600 leading-none mb-2 tracking-tight">24/7</div>
                 <div class="text-slate-600 text-sm font-semibold">Emergency Smart Hands</div>
             </div>
         </div>
 
 
-        <h2 id="services" class="text-2xl font-extrabold tracking-tight mt-12 mb-6 flex items-center gap-3"><span class="w-1 h-3.5 rounded-full bg-brand-500 opacity-85"></span>Services</h2>
-        <p class="text-slate-600 -mt-4 mb-6 text-sm">Enterprise IT infrastructure services across the full data center to edge stack in Romeoville IL.</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <div class="bg-gradient-to-b from-white to-slate-50 p-6 rounded-xl border border-slate-200 border-l-4 border-l-brand-500 shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
-                <h3 class="text-lg font-extrabold text-slate-900 mt-0 mb-2">Data Center Services</h3>
+        <h2 id="services" class="text-2xl font-extrabold tracking-tight mt-16 mb-6 flex items-center gap-3"><span class="w-1 h-3.5 rounded-full bg-brand-500 opacity-85"></span>Services</h2>
+        <p class="text-slate-500 -mt-4 mb-8 text-sm leading-relaxed">Enterprise IT infrastructure services across the full data center to edge stack in Romeoville IL.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
+                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Data Center Services</h3>
                 <p class="text-slate-600 text-sm leading-relaxed mb-0">AI-ready and hyperscale data center build-out, cabling, and infrastructure services for Romeoville facilities, including MDF/IDF optimization and rack builds.</p>
             </div>
-            <div class="bg-gradient-to-b from-white to-slate-50 p-6 rounded-xl border border-slate-200 border-l-4 border-l-brand-500 shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
-                <h3 class="text-lg font-extrabold text-slate-900 mt-0 mb-2">Structured Cabling</h3>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
+                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Structured Cabling</h3>
                 <p class="text-slate-600 text-sm leading-relaxed mb-0">Fiber and copper structured cabling solutions spanning Romeoville data centers, offices, warehouses, and edge locations with certified testing.</p>
             </div>
-            <div class="bg-gradient-to-b from-white to-slate-50 p-6 rounded-xl border border-slate-200 border-l-4 border-l-brand-500 shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
-                <h3 class="text-lg font-extrabold text-slate-900 mt-0 mb-2">Wireless Deployment</h3>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
+                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Wireless Deployment</h3>
                 <p class="text-slate-600 text-sm leading-relaxed mb-0">Enterprise wireless networking: site survey, AP mounting, PoE provisioning, SSID staging, RF validation, and optimization across Romeoville IL.</p>
             </div>
 
-            <div class="bg-gradient-to-b from-white to-slate-50 p-6 rounded-xl border border-slate-200 border-l-4 border-l-brand-500 shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
-                <h3 class="text-lg font-extrabold text-slate-900 mt-0 mb-2">Networking</h3>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
+                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Networking</h3>
                 <p class="text-slate-600 text-sm leading-relaxed mb-0">Advanced wireless infrastructure, SD-WAN deployment, and gateway installations for resilient connectivity across Romeoville facilities.</p>
             </div>
-            <div class="bg-gradient-to-b from-white to-slate-50 p-6 rounded-xl border border-slate-200 border-l-4 border-l-brand-500 shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
-                <h3 class="text-lg font-extrabold text-slate-900 mt-0 mb-2">Audio Visual</h3>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
+                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Audio Visual</h3>
                 <p class="text-slate-600 text-sm leading-relaxed mb-0">Video conferencing deployment, digital signage, and meeting room AV integration for Romeoville offices and enterprise environments.</p>
             </div>
-            <div class="bg-gradient-to-b from-white to-slate-50 p-6 rounded-xl border border-slate-200 border-l-4 border-l-brand-500 shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
-                <h3 class="text-lg font-extrabold text-slate-900 mt-0 mb-2">Electrical Services</h3>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
+                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Electrical Services</h3>
                 <p class="text-slate-600 text-sm leading-relaxed mb-0">Electrical design and deployment including high-voltage systems, power distribution, and EV charging station installation for Romeoville IT environments.</p>
             </div>
 
-            <div class="bg-gradient-to-b from-white to-slate-50 p-6 rounded-xl border border-slate-200 border-l-4 border-l-brand-500 shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
-                <h3 class="text-lg font-extrabold text-slate-900 mt-0 mb-2">Edge / IoT / POS</h3>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
+                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Edge / IoT / POS</h3>
                 <p class="text-slate-600 text-sm leading-relaxed mb-0">Deployment of edge technology, IoT sensors, end-user devices, digital signage, POS systems, and video conferencing at Romeoville retail, warehouse, and office sites.</p>
             </div>
-            <div class="bg-gradient-to-b from-white to-slate-50 p-6 rounded-xl border border-slate-200 border-l-4 border-l-brand-500 shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
-                <h3 class="text-lg font-extrabold text-slate-900 mt-0 mb-2">IT Staffing</h3>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
+                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">IT Staffing</h3>
                 <p class="text-slate-600 text-sm leading-relaxed mb-0">Rapid, skills-focused IT recruitment and field technician placement for Romeoville-area projects, from cable crews to installers.</p>
             </div>
-            <div class="bg-gradient-to-b from-white to-slate-50 p-6 rounded-xl border border-slate-200 border-l-4 border-l-brand-500 shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
-                <h3 class="text-lg font-extrabold text-slate-900 mt-0 mb-2">Network Deployment &amp; Remediation</h3>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
+                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Network Deployment &amp; Remediation</h3>
                 <p class="text-slate-600 text-sm leading-relaxed mb-0">Full-stack physical layout optimization, firewall/switch/PBX installation, demarcation, and remediation for Romeoville commercial and data center environments.</p>
             </div>
-            <div class="bg-gradient-to-b from-white to-slate-50 p-6 rounded-xl border border-slate-200 border-l-4 border-l-brand-500 shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
-                <h3 class="text-lg font-extrabold text-slate-900 mt-0 mb-2">Commercial Smart Hands</h3>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
+                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Commercial Smart Hands</h3>
                 <p class="text-slate-600 text-sm leading-relaxed mb-0">On-site tactical support for Romeoville project teams: rack cleanup, hardware swaps, loop isolation, emergency break-fix, and hands-on escalation support.</p>
             </div>
-            <div class="bg-gradient-to-b from-white to-slate-50 p-6 rounded-xl border border-slate-200 border-l-4 border-l-brand-500 shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
-                <h3 class="text-lg font-extrabold text-slate-900 mt-0 mb-2">Multi-Site Rollouts</h3>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
+                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Multi-Site Rollouts</h3>
                 <p class="text-slate-600 text-sm leading-relaxed mb-0">Structured infrastructure execution for Romeoville retail chains, logistics warehouses, and branch offices with scalable SOW compliance and repeatable playbooks.</p>
             </div>
-            <div class="bg-gradient-to-b from-white to-slate-50 p-6 rounded-xl border border-slate-200 border-l-4 border-l-brand-500 shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
-                <h3 class="text-lg font-extrabold text-slate-900 mt-0 mb-2">Equipment Install, Removal &amp; Relocation</h3>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
+                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Equipment Install, Removal &amp; Relocation</h3>
                 <p class="text-slate-600 text-sm leading-relaxed mb-0">Professional install, decommission, relocation, and asset tracking for servers, network gear, and telecom equipment in Romeoville facilities.</p>
             </div>
         </div>
 
 
 
-        <h2 class="text-2xl font-extrabold tracking-tight mt-12 mb-6 flex items-center gap-3"><span class="w-1 h-3.5 rounded-full bg-brand-500 opacity-85"></span>Romeoville IT Project Scoping Console</h2>
-        <p class="text-slate-600 -mt-4 mb-6 text-sm">Estimate onsite time, crew sizing, and tooling for enterprise infrastructure projects across Romeoville IL.</p>
-        <div class="bg-white border border-slate-200 rounded-xl p-7 grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-7 shadow-lg">
+
+
+        <h2 class="text-2xl font-extrabold tracking-tight mt-16 mb-6 flex items-center gap-3"><span class="w-1 h-3.5 rounded-full bg-brand-500 opacity-85"></span>Romeoville IT Project Scoping Console</h2>
+        <p class="text-slate-500 -mt-4 mb-8 text-sm leading-relaxed">Estimate onsite time, crew sizing, and tooling for enterprise infrastructure projects across Romeoville IL.</p>
+        <div class="bg-white border border-slate-100 rounded-2xl p-7 grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-7 shadow-sm">
             <div>
                 <div class="mb-5">
                     <label for="projectScale" class="flex justify-between items-baseline font-bold mb-2 text-sm text-slate-900">Project Environment Type</label>
@@ -301,7 +312,7 @@
                 </div>
             </div>
 
-            <div class="bg-gradient-to-b from-slate-50 to-white border border-slate-200 rounded-xl p-6 flex flex-col justify-center">
+            <div class="bg-slate-50 border border-slate-100 rounded-xl p-6 flex flex-col justify-center">
                 <div class="mb-5">
                     <span class="text-xs uppercase text-slate-500 tracking-widest block font-bold">Estimated On-Site Window</span>
                     <span id="outHours" class="text-xl font-extrabold text-brand-600 tracking-tight">3-5 Hours</span>
@@ -319,46 +330,52 @@
 
 
 
-        <h2 class="text-2xl font-extrabold tracking-tight mt-12 mb-6 flex items-center gap-3"><span class="w-1 h-3.5 rounded-full bg-brand-500 opacity-85"></span>Industry Expertise</h2>
-        <p class="text-slate-600 -mt-4 mb-6 text-sm">Proven infrastructure support across core Romeoville-area verticals.</p>
+
+
+        <h2 class="text-2xl font-extrabold tracking-tight mt-16 mb-6 flex items-center gap-3"><span class="w-1 h-3.5 rounded-full bg-brand-500 opacity-85"></span>Industry Expertise</h2>
+        <p class="text-slate-500 -mt-4 mb-8 text-sm leading-relaxed">Proven infrastructure support across core Romeoville-area verticals.</p>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4" aria-label="Industries">
-            <div class="bg-slate-50 border border-slate-200 px-3 py-3.5 rounded-full text-center font-bold text-slate-900 text-sm hover:bg-brand-50 hover:border-brand-200 transition-colors">Aerospace</div>
-            <div class="bg-slate-50 border border-slate-200 px-3 py-3.5 rounded-full text-center font-bold text-slate-900 text-sm hover:bg-brand-50 hover:border-brand-200 transition-colors">Automotive</div>
-            <div class="bg-slate-50 border border-slate-200 px-3 py-3.5 rounded-full text-center font-bold text-slate-900 text-sm hover:bg-brand-50 hover:border-brand-200 transition-colors">Construction</div>
-            <div class="bg-slate-50 border border-slate-200 px-3 py-3.5 rounded-full text-center font-bold text-slate-900 text-sm hover:bg-brand-50 hover:border-brand-200 transition-colors">Finance</div>
-            <div class="bg-slate-50 border border-slate-200 px-3 py-3.5 rounded-full text-center font-bold text-slate-900 text-sm hover:bg-brand-50 hover:border-brand-200 transition-colors">Government</div>
-            <div class="bg-slate-50 border border-slate-200 px-3 py-3.5 rounded-full text-center font-bold text-slate-900 text-sm hover:bg-brand-50 hover:border-brand-200 transition-colors">Grocery &amp; Retail</div>
-            <div class="bg-slate-50 border border-slate-200 px-3 py-3.5 rounded-full text-center font-bold text-slate-900 text-sm hover:bg-brand-50 hover:border-brand-200 transition-colors">Healthcare</div>
-            <div class="bg-slate-50 border border-slate-200 px-3 py-3.5 rounded-full text-center font-bold text-slate-900 text-sm hover:bg-brand-50 hover:border-brand-200 transition-colors">Hospitality</div>
-            <div class="bg-slate-50 border border-slate-200 px-3 py-3.5 rounded-full text-center font-bold text-slate-900 text-sm hover:bg-brand-50 hover:border-brand-200 transition-colors">IT Services</div>
-            <div class="bg-slate-50 border border-slate-200 px-3 py-3.5 rounded-full text-center font-bold text-slate-900 text-sm hover:bg-brand-50 hover:border-brand-200 transition-colors">Logistics</div>
-            <div class="bg-slate-50 border border-slate-200 px-3 py-3.5 rounded-full text-center font-bold text-slate-900 text-sm hover:bg-brand-50 hover:border-brand-200 transition-colors">Manufacturing</div>
-            <div class="bg-slate-50 border border-slate-200 px-3 py-3.5 rounded-full text-center font-bold text-slate-900 text-sm hover:bg-brand-50 hover:border-brand-200 transition-colors">Online / Digital</div>
-            <div class="bg-slate-50 border border-slate-200 px-3 py-3.5 rounded-full text-center font-bold text-slate-900 text-sm hover:bg-brand-50 hover:border-brand-200 transition-colors">Pharmacy</div>
-            <div class="bg-slate-50 border border-slate-200 px-3 py-3.5 rounded-full text-center font-bold text-slate-900 text-sm hover:bg-brand-50 hover:border-brand-200 transition-colors">Restaurants</div>
-            <div class="bg-slate-50 border border-slate-200 px-3 py-3.5 rounded-full text-center font-bold text-slate-900 text-sm hover:bg-brand-50 hover:border-brand-200 transition-colors">Specialty Retail</div>
-            <div class="bg-slate-50 border border-slate-200 px-3 py-3.5 rounded-full text-center font-bold text-slate-900 text-sm hover:bg-brand-50 hover:border-brand-200 transition-colors">Telecom</div>
+            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Aerospace</div>
+            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Automotive</div>
+            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Construction</div>
+            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Finance</div>
+            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Government</div>
+            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Grocery &amp; Retail</div>
+            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Healthcare</div>
+            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Hospitality</div>
+            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">IT Services</div>
+            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Logistics</div>
+            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Manufacturing</div>
+            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Online / Digital</div>
+            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Pharmacy</div>
+            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Restaurants</div>
+            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Specialty Retail</div>
+            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Telecom</div>
         </div>
 
 
 
-        <h2 class="text-2xl font-extrabold tracking-tight mt-12 mb-6 flex items-center gap-3"><span class="w-1 h-3.5 rounded-full bg-brand-500 opacity-85"></span>Enterprise Delivery Methodology</h2>
-        <p class="text-slate-600 -mt-4 mb-6 text-sm">A standardized, scalable execution model for consistent delivery from single-site to multi-thousand-location programs.</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"><h3 class="mt-0 text-lg text-slate-900 font-extrabold">Initial Consultation &amp; Survey</h3><p class="text-slate-600 mb-0 text-sm leading-relaxed">Requirements review, site assessment, and infrastructure planning with Romeoville-based deployment teams.</p></div>
-            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"><h3 class="mt-0 text-lg text-slate-900 font-extrabold">Centralized Project Management</h3><p class="text-slate-600 mb-0 text-sm leading-relaxed">Program governance, scheduling, and communications aligned to enterprise milestones and compliance needs.</p></div>
-            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"><h3 class="mt-0 text-lg text-slate-900 font-extrabold">Technician Deployment</h3><p class="text-slate-600 mb-0 text-sm leading-relaxed">Scalable crew dispatch with skills-matched field specialists across the Romeoville metro area.</p></div>
-            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"><h3 class="mt-0 text-lg text-slate-900 font-extrabold">On-Site Installation</h3><p class="text-slate-600 mb-0 text-sm leading-relaxed">Rigorous execution by certified technicians with enterprise tooling, safety practice, and quality controls.</p></div>
-            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"><h3 class="mt-0 text-lg text-slate-900 font-extrabold">Quality Assurance</h3><p class="text-slate-600 mb-0 text-sm leading-relaxed">Structured inspection and testing to validate performance, labeling, and compliance before handoff.</p></div>
-            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"><h3 class="mt-0 text-lg text-slate-900 font-extrabold">Post-Install Support</h3><p class="text-slate-600 mb-0 text-sm leading-relaxed">Documentation, turnover, and follow-on maintenance options to keep Romeoville environments production-ready.</p></div>
+
+
+        <h2 class="text-2xl font-extrabold tracking-tight mt-16 mb-6 flex items-center gap-3"><span class="w-1 h-3.5 rounded-full bg-brand-500 opacity-85"></span>Enterprise Delivery Methodology</h2>
+        <p class="text-slate-500 -mt-4 mb-8 text-sm leading-relaxed">A standardized, scalable execution model for consistent delivery from single-site to multi-thousand-location programs.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"><h3 class="text-base font-bold text-slate-900 mt-0 mb-2">Initial Consultation &amp; Survey</h3><p class="text-slate-600 text-sm leading-relaxed mb-0">Requirements review, site assessment, and infrastructure planning with Romeoville-based deployment teams.</p></div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"><h3 class="text-base font-bold text-slate-900 mt-0 mb-2">Centralized Project Management</h3><p class="text-slate-600 text-sm leading-relaxed mb-0">Program governance, scheduling, and communications aligned to enterprise milestones and compliance needs.</p></div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"><h3 class="text-base font-bold text-slate-900 mt-0 mb-2">Technician Deployment</h3><p class="text-slate-600 text-sm leading-relaxed mb-0">Scalable crew dispatch with skills-matched field specialists across the Romeoville metro area.</p></div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"><h3 class="text-base font-bold text-slate-900 mt-0 mb-2">On-Site Installation</h3><p class="text-slate-600 text-sm leading-relaxed mb-0">Rigorous execution by certified technicians with enterprise tooling, safety practice, and quality controls.</p></div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"><h3 class="text-base font-bold text-slate-900 mt-0 mb-2">Quality Assurance</h3><p class="text-slate-600 text-sm leading-relaxed mb-0">Structured inspection and testing to validate performance, labeling, and compliance before handoff.</p></div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"><h3 class="text-base font-bold text-slate-900 mt-0 mb-2">Post-Install Support</h3><p class="text-slate-600 text-sm leading-relaxed mb-0">Documentation, turnover, and follow-on maintenance options to keep Romeoville environments production-ready.</p></div>
         </div>
 
     </main>
 
 
 
-    <footer class="text-center py-10 px-4 text-slate-500 text-sm border-t border-slate-200 bg-white">
-        <p>&copy; 2026 Chicago Network Pros. All Rights Reserved. | <a href="mailto:dispatch@chicagonetworkpros.com" class="text-slate-500 hover:text-slate-700 transition-colors">dispatch@chicagonetworkpros.com</a> | Romeoville IL</p>
+
+
+    <footer class="text-center py-12 px-6 text-slate-400 text-sm border-t border-slate-100 bg-white">
+        <p>&copy; 2026 Chicago Network Pros. All Rights Reserved. | <a href="mailto:dispatch@chicagonetworkpros.com" class="text-slate-400 hover:text-slate-700 transition-colors">dispatch@chicagonetworkpros.com</a> | Romeoville IL</p>
     </footer>
 
     <script>
@@ -416,6 +433,8 @@
                 card.style.setProperty('--my', `${((e.clientY - rect.top) / rect.height) * 100}%`);
             });
         });
+
+
 
         // Mobile drawer toggle
         (function initDrawer() {
