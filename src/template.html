@@ -27,8 +27,6 @@
     <meta name="twitter:title" content="{{PAGE_TITLE}}">
     <meta name="twitter:description" content="{{META_DESC}}">
 
-
-
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -36,11 +34,11 @@
       "name": "Chicago Network Pros",
       "description": "Enterprise onsite IT and network infrastructure services in {{CITY_NAME}} {{CITY_STATE}}: data center, cabling, wireless, networking, AV, electrical, edge/IoT/POS, and IT staffing.",
       "url": "{{CANONICAL_URL}}",
-      "telephone": "+1-{{PHONE_DISPLAY}}",
+      "telephone": "+1-{{PHONE_LINK}}",
       "email": "dispatch@chicagonetworkpros.com",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "{{CITY_NAME}}",
+        "addressLocality": "{{AREA_SERVED_CITY}}",
         "addressRegion": "{{CITY_STATE}}",
         "addressCountry": "US"
       },
@@ -50,8 +48,6 @@
         "@type": "City",
         "name": "{{AREA_SERVED_CITY}}"
       },
-
-
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Enterprise IT and Infrastructure Services",
@@ -69,29 +65,30 @@
     }
     </script>
 
-
-
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
               brand: {
-                50: '#ecfdf5',
-                100: '#d1fae5',
-                200: '#a7f3d0',
-                300: '#6ee7b7',
-                400: '#34d399',
-                500: '#10b981',
-                600: '#059669',
-                700: '#047857',
-                800: '#065f46',
-                900: '#064e3b'
+                50: '#f0fdf4',
+                100: '#dcfce7',
+                200: '#bbf7d0',
+                300: '#86efac',
+                400: '#4ade80',
+                500: '#22c55e',
+                600: '#16a34a',
+                700: '#15803d',
+                800: '#166534',
+                900: '#14532d'
               }
             },
             fontFamily: {
-              sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Plus Jakarta Sans', 'sans-serif']
             }
           }
         }
@@ -106,14 +103,17 @@
         }
         .card-glow::before {
           content: "";
-          @apply absolute inset-0 rounded-xl opacity-0 transition-opacity duration-400 pointer-events-none;
-          background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 50%), rgba(16,185,129,0.10), transparent 40%);
+          @apply absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-500 pointer-events-none;
+          background: radial-gradient(800px circle at var(--mx, 50%) var(--my, 50%), rgba(34,197,94,0.08), transparent 45%);
         }
         .card-glow:hover::before {
           @apply opacity-100;
         }
+        .grid-bg {
+          background-image: linear-gradient(to right, rgba(226, 232, 240, 0.4) 1px, transparent 1px), linear-gradient(to bottom, rgba(226, 232, 240, 0.4) 1px, transparent 1px);
+          background-size: 24px 24px;
+        }
       }
-
 
       input[type="range"] {
         -webkit-appearance: none;
@@ -121,348 +121,208 @@
         height: 6px;
         background: #e2e8f0;
         border-radius: 9999px;
-        border: none;
-        padding: 0;
       }
       input[type="range"]::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
-        height: 18px;
-        width: 18px;
+        height: 20px;
+        width: 20px;
         border-radius: 9999px;
-        background: #0f172a;
+        background: #16a34a;
         border: 2px solid #ffffff;
-        box-shadow: 0 6px 18px rgba(15,23,42,0.25);
+        box-shadow: 0 4px 12px rgba(22,163,74,0.3);
         cursor: pointer;
-        transition: transform 0.15s ease;
+        transition: all 0.15s ease;
       }
       input[type="range"]::-webkit-slider-thumb:hover {
-        transform: scale(1.05);
+        transform: scale(1.1);
+        background: #15803d;
       }
       input[type="range"]::-moz-range-thumb {
-        height: 18px;
-        width: 18px;
+        height: 16px;
+        width: 16px;
         border-radius: 9999px;
-        background: #0f172a;
+        background: #16a34a;
         border: 2px solid #ffffff;
-        box-shadow: 0 6px 18px rgba(15,23,42,0.25);
+        box-shadow: 0 4px 12px rgba(22,163,74,0.3);
         cursor: pointer;
       }
     </style>
 </head>
 
+<body class="font-sans text-slate-900 leading-relaxed antialiased bg-slate-50/50">
 
-<body class="font-sans text-slate-900 leading-relaxed antialiased">
-
-    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-slate-100">
-        <div class="max-w-6xl mx-auto px-6 py-3.5 flex items-center justify-between">
-            <a class="font-extrabold tracking-tight text-slate-900 text-lg no-underline" href="#">Chicago Network Pros</a>
-            <div class="hidden md:flex items-center gap-3">
-                <a class="text-slate-600 font-semibold text-sm px-3 py-1.5 rounded-full hover:bg-slate-50 hover:text-slate-900 transition-colors no-underline" href="#services">Services</a>
-                <a class="bg-brand-600 text-white px-4 py-2 rounded-full font-semibold text-sm shadow-sm hover:bg-brand-700 transition-all no-underline" href="mailto:dispatch@chicagonetworkpros.com">Request Field Dispatch</a>
+    <nav class="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b border-slate-200/60 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a class="font-heading font-extrabold tracking-tight text-slate-950 text-xl no-underline flex items-center gap-2" href="#">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-500 animate-pulse"></span>
+                Chicago Network Pros
+            </a>
+            <div class="hidden md:flex items-center gap-6">
+                <a class="text-slate-600 font-semibold text-sm hover:text-slate-950 transition-colors no-underline" href="#services">Services</a>
+                <a class="bg-slate-950 text-white px-5 py-2.5 rounded-full font-bold text-xs tracking-wide uppercase shadow-sm hover:bg-brand-700 hover:shadow-md transition-all no-underline" href="mailto:dispatch@chicagonetworkpros.com">Request Field Dispatch</a>
             </div>
-            <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Open menu">
-                <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button id="menuBtn" class="md:hidden p-2 rounded-xl hover:bg-slate-100/80 transition-colors border border-slate-200/50" aria-label="Open menu">
+                <svg class="w-6 h-6 text-slate-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
             </button>
         </div>
     </nav>
 
-
-
-    <!-- Mobile drawer overlay -->
-    <div id="drawerOverlay" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
-
-    <!-- Mobile drawer panel -->
-    <div id="drawer" class="fixed top-0 right-0 h-full w-72 bg-white z-50 shadow-2xl translate-x-full transition-transform duration-300 ease-in-out p-6">
-        <button id="drawerClose" class="absolute top-4 right-4 p-2 rounded-lg hover:bg-slate-100" aria-label="Close menu">
-            <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
-        </button>
-        <nav class="mt-12 flex flex-col gap-4">
-            <a href="#services" class="text-lg font-semibold text-slate-800 hover:text-brand-600 transition-colors no-underline">Services</a>
-            <a href="mailto:dispatch@chicagonetworkpros.com" class="mt-4 block text-center bg-slate-900 text-white py-3 px-4 rounded-full font-bold hover:bg-slate-800 transition-colors no-underline">Request Field Dispatch</a>
-        </nav>
+    <div id="drawerOverlay" class="fixed inset-0 bg-slate-950/40 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+    <div id="drawer" class="fixed top-0 right-0 h-full w-80 bg-white z-50 shadow-2xl translate-x-full transition-transform duration-300 ease-in-out p-8 flex flex-col justify-between">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+                <span class="font-heading font-bold text-slate-900">Navigation</span>
+                <button id="drawerClose" class="p-2 rounded-xl hover:bg-slate-100 border border-slate-100" aria-label="Close menu">
+                    <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <nav class="mt-8 flex flex-col gap-5">
+                <a href="#services" class="text-base font-semibold text-slate-700 hover:text-brand-600 transition-colors no-underline">Services</a>
+            </nav>
+        </div>
+        <div>
+            <a href="mailto:dispatch@chicagonetworkpros.com" class="block text-center bg-slate-950 text-white py-3.5 px-4 rounded-full font-bold text-sm hover:bg-brand-700 transition-all no-underline shadow-md shadow-slate-950/10">Request Field Dispatch</a>
+        </div>
     </div>
 
-
-
-    <header class="bg-white border-b border-slate-100">
-        <div class="max-w-6xl mx-auto px-6 py-16 md:py-24">
-            <span class="inline-flex items-center gap-2 bg-brand-50 text-brand-700 border border-brand-100 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase">{{INDUSTRY_FOCUS_TEXT}}</span>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mt-4 mb-4">{{HERO_HEADING}}</h1>
-            <p class="text-slate-500 text-lg max-w-3xl mb-8 leading-relaxed">
+    <header class="relative bg-white border-b border-slate-200/60 overflow-hidden grid-bg">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-50/30 pointer-events-none"></div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand-200/20 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-6xl mx-auto px-6 py-20 md:py-28 relative z-10">
+            <span class="inline-flex items-center gap-2 bg-brand-50 text-brand-700 border border-brand-200 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase shadow-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+                {{INDUSTRY_FOCUS_TEXT}}
+            </span>
+            <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-950 leading-[1.1] mt-6 mb-6 max-w-4xl">
+                {{HERO_HEADING}}
+            </h1>
+            <p class="text-slate-600 text-lg md:text-xl max-w-3xl mb-10 leading-relaxed font-normal">
                 {{HERO_SUBTITLE}}
             </p>
-            <a href="mailto:dispatch@chicagonetworkpros.com" class="inline-flex items-center gap-2 bg-slate-900 text-white px-5 py-3.5 rounded-full font-bold shadow-xl hover:-translate-y-0.5 hover:shadow-2xl transition-all no-underline">
-                Start a Project
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
-            <div class="mt-5 font-bold text-slate-900">
-                {{CITY_NAME}} {{CITY_STATE}} Direct Line: <a href="tel:{{PHONE_LINK}}" class="text-brand-600 font-extrabold no-underline hover:text-brand-700">{{PHONE_DISPLAY}}</a>
+            
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                <a href="mailto:dispatch@chicagonetworkpros.com" class="inline-flex items-center justify-center gap-2 bg-slate-950 text-white px-7 py-4 rounded-full font-bold text-sm tracking-wide uppercase shadow-lg shadow-slate-950/10 hover:bg-brand-600 hover:shadow-xl hover:shadow-brand-600/10 hover:-translate-y-0.5 transition-all no-underline">
+                    Start a Project
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+                <div class="py-3 px-5 bg-slate-100/80 rounded-full border border-slate-200/60 text-sm text-slate-800 font-medium">
+                    {{CITY_NAME}} {{CITY_STATE}} Direct Line: <a href="tel:{{PHONE_LINK}}" class="text-brand-700 font-bold no-underline hover:text-brand-600 transition-colors ml-1">{{PHONE_DISPLAY}}</a>
+                </div>
             </div>
         </div>
     </header>
 
+    <main class="max-w-6xl mx-auto px-6 py-12">
 
-
-
-
-    <main class="max-w-6xl mx-auto px-6 py-16 md:py-24">
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
-            <div class="card-glow bg-white p-7 rounded-2xl text-center border border-slate-100 shadow-sm">
-                <div class="text-4xl font-black text-brand-600 leading-none mb-2 tracking-tight">500+</div>
-                <div class="text-slate-600 text-sm font-semibold">Completed Work Orders</div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 -mt-20 relative z-20 mb-20">
+            <div class="card-glow bg-white p-8 rounded-2xl border border-slate-200/70 shadow-md shadow-slate-100/50 flex flex-col justify-between group">
+                <div class="text-4xl font-heading font-black text-brand-600 tracking-tight mb-2">500+</div>
+                <div class="text-slate-800 font-bold text-sm tracking-wide uppercase">Completed Work Orders</div>
             </div>
-            <div class="card-glow bg-white p-7 rounded-2xl text-center border border-slate-100 shadow-sm">
-                <div class="text-4xl font-black text-brand-600 leading-none mb-2 tracking-tight">10+ Yrs</div>
-                <div class="text-slate-600 text-sm font-semibold">Enterprise Field Services</div>
+            <div class="card-glow bg-white p-8 rounded-2xl border border-slate-200/70 shadow-md shadow-slate-100/50 flex flex-col justify-between group">
+                <div class="text-4xl font-heading font-black text-brand-600 tracking-tight mb-2">10+ Yrs</div>
+                <div class="text-slate-800 font-bold text-sm tracking-wide uppercase">Enterprise Field Services</div>
             </div>
-            <div class="card-glow bg-white p-7 rounded-2xl text-center border border-slate-100 shadow-sm">
-                <div class="text-4xl font-black text-brand-600 leading-none mb-2 tracking-tight">24/7</div>
-                <div class="text-slate-600 text-sm font-semibold">Emergency Smart Hands</div>
+            <div class="card-glow bg-white p-8 rounded-2xl border border-slate-200/70 shadow-md shadow-slate-100/50 flex flex-col justify-between group">
+                <div class="text-4xl font-heading font-black text-brand-600 tracking-tight mb-2">24/7</div>
+                <div class="text-slate-800 font-bold text-sm tracking-wide uppercase">Emergency Smart Hands</div>
             </div>
         </div>
 
-
-        <h2 id="services" class="text-2xl font-extrabold tracking-tight mt-16 mb-6 flex items-center gap-3"><span class="w-1 h-3.5 rounded-full bg-brand-500 opacity-85"></span>Services</h2>
-        <p class="text-slate-500 -mt-4 mb-8 text-sm leading-relaxed">Enterprise IT infrastructure services across the full data center to edge stack in {{CITY_NAME}} {{CITY_STATE}}.</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
-                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Data Center Services</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-0">AI-ready and hyperscale data center build-out, cabling, and infrastructure services for {{CITY_NAME}} facilities, including MDF/IDF optimization and rack builds.</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
-                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Structured Cabling</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-0">Fiber and copper structured cabling solutions spanning {{CITY_NAME}} data centers, offices, warehouses, and edge locations with certified testing.</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
-                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Wireless Deployment</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-0">Enterprise wireless networking: site survey, AP mounting, PoE provisioning, SSID staging, RF validation, and optimization across {{CITY_NAME}} {{CITY_STATE}}.</p>
-            </div>
-
-
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
-                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Networking</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-0">Advanced wireless infrastructure, SD-WAN deployment, and gateway installations for resilient connectivity across {{CITY_NAME}} facilities.</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
-                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Audio Visual</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-0">Video conferencing deployment, digital signage, and meeting room AV integration for {{CITY_NAME}} offices and enterprise environments.</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
-                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Electrical Services</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-0">Electrical design and deployment including high-voltage systems, power distribution, and EV charging station installation for {{CITY_NAME}} IT environments.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
-                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Edge / IoT / POS</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-0">Deployment of edge technology, IoT sensors, end-user devices, digital signage, POS systems, and video conferencing at {{CITY_NAME}} retail, warehouse, and office sites.</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
-                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">IT Staffing</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-0">Rapid, skills-focused IT recruitment and field technician placement for {{CITY_NAME}}-area projects, from cable crews to installers.</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
-                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Network Deployment &amp; Remediation</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-0">Full-stack physical layout optimization, firewall/switch/PBX installation, demarcation, and remediation for {{CITY_NAME}} commercial and data center environments.</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
-                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Commercial Smart Hands</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-0">On-site tactical support for {{CITY_NAME}} project teams: rack cleanup, hardware swaps, loop isolation, emergency break-fix, and hands-on escalation support.</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
-                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Multi-Site Rollouts</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-0">Structured infrastructure execution for {{CITY_NAME}} retail chains, logistics warehouses, and branch offices with scalable SOW compliance and repeatable playbooks.</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
-                <h3 class="text-base font-bold text-slate-900 mt-0 mb-2 group-hover:text-brand-600 transition-colors">Equipment Install, Removal &amp; Relocation</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-0">Professional install, decommission, relocation, and asset tracking for servers, network gear, and telecom equipment in {{CITY_NAME}} facilities.</p>
-            </div>
-        </div>
-
-
-
-
-
-        <h2 class="text-2xl font-extrabold tracking-tight mt-16 mb-6 flex items-center gap-3"><span class="w-1 h-3.5 rounded-full bg-brand-500 opacity-85"></span>{{CITY_NAME}} IT Project Scoping Console</h2>
-        <p class="text-slate-500 -mt-4 mb-8 text-sm leading-relaxed">Estimate onsite time, crew sizing, and tooling for enterprise infrastructure projects across {{CITY_NAME}} {{CITY_STATE}}.</p>
-        <div class="bg-white border border-slate-100 rounded-2xl p-7 grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-7 shadow-sm">
-            <div>
-                <div class="mb-5">
-                    <label for="projectScale" class="flex justify-between items-baseline font-bold mb-2 text-sm text-slate-900">Project Environment Type</label>
-                    <select id="projectScale" class="w-full bg-white border border-slate-300 text-slate-900 px-3 py-2.5 rounded-lg outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 transition-all">
-                        <option value="1">Standard IDF Closet</option>
-                        <option value="1.5">Core MDF / Data Center Rack Overhaul</option>
-                        <option value="2">Multi-Floor Corporate / Warehouse Rollout</option>
-                    </select>
+        <div class="pt-4">
+            <h2 id="services" class="font-heading text-3xl font-extrabold tracking-tight text-slate-950 flex items-center gap-3">
+                <span class="w-1.5 h-6 rounded-full bg-brand-500"></span>
+                Services Catalog
+            </h2>
+            <p class="text-slate-500 mt-2 mb-10 text-base max-w-2xl font-normal">Enterprise IT infrastructure services across the full data center to edge stack in {{CITY_NAME}} {{CITY_STATE}}.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-7 rounded-2xl border-l-4 border-l-brand-500 border-y border-r border-slate-200/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <h3 class="font-heading text-base font-bold text-slate-950 mb-3 group-hover:text-brand-600 transition-colors">Data Center Services</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed font-normal">AI-ready and hyperscale data center build-out, cabling, and infrastructure services for {{CITY_NAME}} facilities, including MDF/IDF optimization and rack builds.</p>
+                    </div>
                 </div>
-
-                <div class="mb-5">
-                    <label for="rackCount" class="flex justify-between items-baseline font-bold mb-2 text-sm text-slate-900">Racks to Remediate / Clean <span id="rackVal" class="text-brand-600 font-extrabold tabular-nums">1</span></label>
-                    <input type="range" id="rackCount" min="1" max="10" value="1" class="w-full">
+                <div class="bg-white p-7 rounded-2xl border-l-4 border-l-brand-500 border-y border-r border-slate-200/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <h3 class="font-heading text-base font-bold text-slate-950 mb-3 group-hover:text-brand-600 transition-colors">Structured Cabling</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed font-normal">Fiber and copper structured cabling solutions spanning {{CITY_NAME}} data centers, offices, warehouses, and edge locations with certified testing.</p>
+                    </div>
                 </div>
-
-                <div class="mb-5">
-                    <label for="cableZen" class="flex justify-between items-baseline font-bold mb-2 text-sm text-slate-900">Structured Cable Drops Needed <span id="cableVal" class="text-brand-600 font-extrabold tabular-nums">10</span></label>
-                    <input type="range" id="cableZen" min="0" max="100" step="5" value="10" class="w-full">
+                <div class="bg-white p-7 rounded-2xl border-l-4 border-l-brand-500 border-y border-r border-slate-200/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <h3 class="font-heading text-base font-bold text-slate-950 mb-3 group-hover:text-brand-600 transition-colors">Wireless Deployment</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed font-normal">Enterprise wireless networking: site survey, AP mounting, PoE provisioning, SSID staging, RF validation, and optimization across {{CITY_NAME}} {{CITY_STATE}}.</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="bg-slate-50 border border-slate-100 rounded-xl p-6 flex flex-col justify-center">
-                <div class="mb-5">
-                    <span class="text-xs uppercase text-slate-500 tracking-widest block font-bold">Estimated On-Site Window</span>
-                    <span id="outHours" class="text-xl font-extrabold text-brand-600 tracking-tight">3-5 Hours</span>
+                <div class="bg-white p-7 rounded-2xl border-l-4 border-l-brand-500 border-y border-r border-slate-200/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <h3 class="font-heading text-base font-bold text-slate-950 mb-3 group-hover:text-brand-600 transition-colors">Networking</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed font-normal">Advanced wireless infrastructure, SD-WAN deployment, and gateway installations for resilient connectivity across {{CITY_NAME}} facilities.</p>
+                    </div>
                 </div>
-                <div class="mb-5">
-                    <span class="text-xs uppercase text-slate-500 tracking-widest block font-bold">Recommended Tech Dispatch Scale</span>
-                    <span id="outCrew" class="text-xl font-extrabold text-slate-900 tracking-tight">1 Lead Field Specialist</span>
+                <div class="bg-white p-7 rounded-2xl border-l-4 border-l-brand-500 border-y border-r border-slate-200/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <h3 class="font-heading text-base font-bold text-slate-950 mb-3 group-hover:text-brand-600 transition-colors">Audio Visual</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed font-normal">Video conferencing deployment, digital signage, and meeting room AV integration for {{CITY_NAME}} offices and enterprise environments.</p>
+                    </div>
                 </div>
-                <div>
-                    <span class="text-xs uppercase text-slate-500 tracking-widest block font-bold">Essential On-Site Staging Tools</span>
-                    <span id="outTools" class="text-xl font-extrabold text-slate-900 tracking-tight" style="font-size: 1.05rem; display: block; margin-top: 0.25rem;">Fluke LinkIQ, Console Rollabout, Labeler</span>
+                <div class="bg-white p-7 rounded-2xl border-l-4 border-l-brand-500 border-y border-r border-slate-200/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <h3 class="font-heading text-base font-bold text-slate-950 mb-3 group-hover:text-brand-600 transition-colors">Electrical Services</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed font-normal">Electrical design and deployment including high-voltage systems, power distribution, and EV charging station installation for {{CITY_NAME}} IT environments.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-7 rounded-2xl border-l-4 border-l-brand-500 border-y border-r border-slate-200/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <h3 class="font-heading text-base font-bold text-slate-950 mb-3 group-hover:text-brand-600 transition-colors">Edge / IoT / POS</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed font-normal">Deployment of edge technology, IoT sensors, end-user devices, digital signage, POS systems, and video conferencing at {{CITY_NAME}} retail, warehouse, and office sites.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-7 rounded-2xl border-l-4 border-l-brand-500 border-y border-r border-slate-200/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <h3 class="font-heading text-base font-bold text-slate-950 mb-3 group-hover:text-brand-600 transition-colors">IT Staffing</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed font-normal">Rapid, skills-focused IT recruitment and field technician placement for {{CITY_NAME}}-area projects, from cable crews to installers.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-7 rounded-2xl border-l-4 border-l-brand-500 border-y border-r border-slate-200/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <h3 class="font-heading text-base font-bold text-slate-950 mb-3 group-hover:text-brand-600 transition-colors">Network Deployment &amp; Remediation</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed font-normal">Full-stack physical layout optimization, firewall/switch/PBX installation, demarcation, and remediation for {{CITY_NAME}} commercial and data center environments.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-7 rounded-2xl border-l-4 border-l-brand-500 border-y border-r border-slate-200/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <h3 class="font-heading text-base font-bold text-slate-950 mb-3 group-hover:text-brand-600 transition-colors">Commercial Smart Hands</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed font-normal">On-site tactical support for {{CITY_NAME}} project teams: rack cleanup, hardware swaps, loop isolation, emergency break-fix, and hands-on escalation support.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-7 rounded-2xl border-l-4 border-l-brand-500 border-y border-r border-slate-200/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <h3 class="font-heading text-base font-bold text-slate-950 mb-3 group-hover:text-brand-600 transition-colors">Multi-Site Rollouts</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed font-normal">Structured infrastructure execution for {{CITY_NAME}} retail chains, logistics warehouses, and branch offices with scalable SOW compliance and repeatable playbooks.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-7 rounded-2xl border-l-4 border-l-brand-500 border-y border-r border-slate-200/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <h3 class="font-heading text-base font-bold text-slate-950 mb-3 group-hover:text-brand-600 transition-colors">Equipment Install, Removal &amp; Relocation</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed font-normal">Professional install, decommission, relocation, and asset tracking for servers, network gear, and telecom equipment in {{CITY_NAME}} facilities.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-
-
-
-
-        <h2 class="text-2xl font-extrabold tracking-tight mt-16 mb-6 flex items-center gap-3"><span class="w-1 h-3.5 rounded-full bg-brand-500 opacity-85"></span>Industry Expertise</h2>
-        <p class="text-slate-500 -mt-4 mb-8 text-sm leading-relaxed">Proven infrastructure support across core {{CITY_NAME}}-area verticals.</p>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4" aria-label="Industries">
-            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Aerospace</div>
-            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Automotive</div>
-            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Construction</div>
-            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Finance</div>
-            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Government</div>
-            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Grocery &amp; Retail</div>
-            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Healthcare</div>
-            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Hospitality</div>
-            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">IT Services</div>
-            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Logistics</div>
-            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Manufacturing</div>
-            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Online / Digital</div>
-            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Pharmacy</div>
-            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Restaurants</div>
-            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Specialty Retail</div>
-            <div class="bg-white border border-slate-100 px-3 py-3.5 rounded-full text-center font-semibold text-slate-700 text-sm hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors">Telecom</div>
-        </div>
-
-
-
-
-
-        <h2 class="text-2xl font-extrabold tracking-tight mt-16 mb-6 flex items-center gap-3"><span class="w-1 h-3.5 rounded-full bg-brand-500 opacity-85"></span>Enterprise Delivery Methodology</h2>
-        <p class="text-slate-500 -mt-4 mb-8 text-sm leading-relaxed">A standardized, scalable execution model for consistent delivery from single-site to multi-thousand-location programs.</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"><h3 class="text-base font-bold text-slate-900 mt-0 mb-2">Initial Consultation &amp; Survey</h3><p class="text-slate-600 text-sm leading-relaxed mb-0">Requirements review, site assessment, and infrastructure planning with {{CITY_NAME}}-based deployment teams.</p></div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"><h3 class="text-base font-bold text-slate-900 mt-0 mb-2">Centralized Project Management</h3><p class="text-slate-600 text-sm leading-relaxed mb-0">Program governance, scheduling, and communications aligned to enterprise milestones and compliance needs.</p></div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"><h3 class="text-base font-bold text-slate-900 mt-0 mb-2">Technician Deployment</h3><p class="text-slate-600 text-sm leading-relaxed mb-0">Scalable crew dispatch with skills-matched field specialists across the {{CITY_NAME}} metro area.</p></div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"><h3 class="text-base font-bold text-slate-900 mt-0 mb-2">On-Site Installation</h3><p class="text-slate-600 text-sm leading-relaxed mb-0">Rigorous execution by certified technicians with enterprise tooling, safety practice, and quality controls.</p></div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"><h3 class="text-base font-bold text-slate-900 mt-0 mb-2">Quality Assurance</h3><p class="text-slate-600 text-sm leading-relaxed mb-0">Structured inspection and testing to validate performance, labeling, and compliance before handoff.</p></div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"><h3 class="text-base font-bold text-slate-900 mt-0 mb-2">Post-Install Support</h3><p class="text-slate-600 text-sm leading-relaxed mb-0">Documentation, turnover, and follow-on maintenance options to keep {{CITY_NAME}} environments production-ready.</p></div>
-        </div>
-
-    </main>
-
-
-
-
-
-    <footer class="text-center py-12 px-6 text-slate-400 text-sm border-t border-slate-100 bg-white">
-        <p>&copy; {{COPYRIGHT_YEAR}} Chicago Network Pros. All Rights Reserved. | <a href="mailto:dispatch@chicagonetworkpros.com" class="text-slate-400 hover:text-slate-700 transition-colors">dispatch@chicagonetworkpros.com</a> | {{CITY_NAME}} {{CITY_STATE}}</p>
-    </footer>
-
-    <script>
-        const scaleSelect = document.getElementById('projectScale');
-        const rackSlider = document.getElementById('rackCount');
-        const cableSlider = document.getElementById('cableZen');
-
-        const rackValDisplay = document.getElementById('rackVal');
-        const cableValDisplay = document.getElementById('cableVal');
-
-        const outHours = document.getElementById('outHours');
-        const outCrew = document.getElementById('outCrew');
-        const outTools = document.getElementById('outTools');
-
-        function calculateMetrics() {
-            const scale = parseFloat(scaleSelect.value);
-            const racks = parseInt(rackSlider.value);
-            const cables = parseInt(cableSlider.value);
-
-            rackValDisplay.innerText = racks;
-            cableValDisplay.innerText = cables;
-
-            let baseHours = (racks * 2.5) + (cables * 0.25);
-            let totalHours = Math.round(baseHours * scale);
-            if (totalHours < 3) totalHours = 3;
-
-            outHours.innerText = `${(totalHours - 1)}-${(totalHours + 2)} Hours`;
-
-            if (totalHours > 16 || racks >= 5 || cables >= 60) {
-                outCrew.innerText = "2-Tech Crew (Lead + Assist)";
-            } else {
-                outCrew.innerText = "1 Lead Field Specialist";
-            }
-
-            let tools = ["Fluke Tester", "Console Rollabout"];
-            if (cables > 20) tools.push("Punchdown Stack", "Velocity Crimper");
-            if (racks >= 3) tools.push("Labeling System", "Cage Nut Extraction Suite");
-            if (scale === 2) tools.push("10ft A-Frame / Lift Prerequisite");
-
-            outTools.innerText = tools.join(", ");
-        }
-
-        scaleSelect.addEventListener('input', calculateMetrics);
-        rackSlider.addEventListener('input', calculateMetrics);
-        cableSlider.addEventListener('input', calculateMetrics);
-
-        // Initial build calculation on load
-        calculateMetrics();
-
-        // Mouse overlay effect logic for card grids
-        document.querySelectorAll('.card-glow').forEach((card) => {
-            card.addEventListener('pointermove', (e) => {
-                const rect = card.getBoundingClientRect();
-                card.style.setProperty('--mx', `${((e.clientX - rect.left) / rect.width) * 100}%`);
-                card.style.setProperty('--my', `${((e.clientY - rect.top) / rect.height) * 100}%`);
-            });
-        });
-
-
-
-        // Mobile drawer toggle
-        (function initDrawer() {
-            const btn = document.getElementById('menuBtn');
-            const drawer = document.getElementById('drawer');
-            const overlay = document.getElementById('drawerOverlay');
-            const closeBtn = document.getElementById('drawerClose');
-
-            function openDrawer() {
-                drawer.classList.remove('translate-x-full');
-                drawer.classList.add('translate-x-0');
-                overlay.classList.remove('opacity-0', 'pointer-events-none');
-                overlay.classList.add('opacity-100', 'pointer-events-auto');
-            }
-
-            function closeDrawer() {
-                drawer.classList.remove('translate-x-0');
-                drawer.classList.add('translate-x-full');
-                overlay.classList.remove('opacity-100', 'pointer-events-auto');
-                overlay.classList.add('opacity-0', 'pointer-events-none');
-            }
-
-            btn.addEventListener('click', openDrawer);
-            overlay.addEventListener('click', closeDrawer);
-            closeBtn.addEventListener('click', closeDrawer);
-            drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
-        })();
-    </script>
-
-</body>
-</html>
+        <div class="mt-24">
+            <h2 class="font-heading text-3xl font-extrabold tracking-tight text-slate-950 flex items-center gap-3">
+                <span class="w-1.5 h-6 rounded-full bg-brand-500"></span>
+                Project Scoping Console
+            </h2>
+            <p class="text-slate-500 mt-2 mb-10 text-base max-w-2xl font-normal">Estimate onsite time, crew sizing, and tooling for enterprise infrastructure projects across {{CITY_NAME}} {{CITY_STATE}}.</p>
+            
+            <div class="bg-white border border-slate-200/70 rounded-2xl p-6 md:p-10 grid grid-cols-1 lg:grid-cols-
