@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">Chicago Network Pros</title>
+  <desc id="desc">Minimal CNP logo mark</desc>
+  <rect width="120" height="120" rx="24" fill="#171717"/>
+  <rect x="14" y="14" width="92" height="92" rx="20" fill="#3ecf8e"/>
+  <path d="M36 40h12v40H36zm19 0h12l13 21v-21h12v40H80L67 59v21H55z" fill="#072719"/>
+</svg>
