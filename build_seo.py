@@ -49,7 +49,10 @@ def render_page(template, city):
         f"structured cabling {city['name']}, fiber optic installation {city['name']}, "
         f"low voltage cabling {city['name']}, Wi-Fi installation {city['name']}, "
         f"network switch installation {city['name']}, smart hands {city['name']}, "
-        f"IT field services {city['name']}, Chicago Network Pros"
+        f"IT field services {city['name']}, website design {city['name']}, "
+        f"AI automation {city['name']}, content creation {city['name']}, "
+        f"business support {city['name']}, residential tech support {city['name']}, "
+        f"Chicago Network Pros"
     )
     rendered = re.sub(r'<title>.*?</title>', f'<title>{title}</title>', rendered, count=1)
     rendered = re.sub(r'<meta name="description" content=".*?">', f'<meta name="description" content="{city["meta_desc"]}">', rendered, count=1)
@@ -63,11 +66,13 @@ def render_page(template, city):
     rendered = rendered.replace('"name":"Chicago"},"hasOfferCatalog"', f'"name":"{city["name"]}"}},"hasOfferCatalog"')
     rendered = rendered.replace('Chicago’s onsite infrastructure partner', f'{city["name"]} onsite infrastructure partner')
     rendered = rendered.replace('Infrastructure work that <em>keeps business moving.</em>', city['hero_heading'])
-    rendered = rendered.replace('From a single network closet to a multi-site rollout, we put skilled technicians on the ground to build, upgrade, and support your critical IT environment.', city['hero_subtitle'])
+    rendered = rendered.replace('From a single network closet to a new website launch, we put skilled technicians and builders on the ground to support Chicago businesses and residents with IT, AI automation, and content work that actually ships.', city['hero_subtitle'])
     rendered = rendered.replace('across the Chicago metro.', f'across {city["name"]} and the Chicago metro.')
     rendered = rendered.replace('Chicago metro coverage, ready to deploy.', f'{city["name"]} coverage, ready to deploy.')
     rendered = rendered.replace('throughout Chicagoland.', f'throughout {city["name"]} and Chicagoland.')
     rendered = rendered.replace('CHICAGO, IL · ENTERPRISE FIELD SERVICES', f'{city["name"].upper()}, IL · ENTERPRISE FIELD SERVICES')
+    rendered = rendered.replace('The team behind your network, website, and content.', 'The field team behind your network, website, and content.')
+    rendered = rendered.replace('Built for businesses, residents, and property teams that want reliable support across infrastructure, digital presence, and everyday tech needs.', 'Built for businesses, residents, and property teams that want reliable support across infrastructure, digital presence, and everyday tech needs.')
     return rendered
 
 
@@ -77,11 +82,11 @@ def render_root_page(template):
     rendered = rendered.replace('{{CITY_NAME}}', 'Chicago')
     rendered = rendered.replace('{{CITY_STATE}}', 'IL')
     rendered = rendered.replace('{{PAGE_TITLE}}', 'Chicago Network Pros | Enterprise IT & Network Infrastructure Services in Chicago IL')
-    rendered = rendered.replace('{{META_DESC}}', 'Chicago Network Pros delivers enterprise IT and network infrastructure services in Chicago IL: data center build-out, structured cabling, wireless, networking, audio visual, electrical, edge/IoT/POS, IT staffing, and 24/7 smart hands dispatch.')
+    rendered = rendered.replace('{{META_DESC}}', 'Chicago Network Pros delivers enterprise IT, website design, AI automation, content creation, and hands-on support in Chicago IL for businesses and residents.')
     rendered = rendered.replace('{{CANONICAL_URL}}', f'{SITE_URL}/')
     rendered = rendered.replace('{{AREA_SERVED_CITY}}', 'Chicago')
     rendered = rendered.replace('{{HERO_HEADING}}', 'Enterprise IT Infrastructure Services in Chicago IL')
-    rendered = rendered.replace('{{HERO_SUBTITLE}}', 'Chicago Network Pros engineers high-performance, scalable IT infrastructure for Chicago-area data centers, corporate offices, warehouses, and retail locations. From cabling and wireless to networking, audio visual, electrical, and edge/IoT deployments, we deliver onsite field execution for enterprise digital transformation.')
+    rendered = rendered.replace('{{HERO_SUBTITLE}}', 'Chicago Network Pros engineers high-performance, scalable IT infrastructure and digital support for Chicago-area data centers, corporate offices, warehouses, residential clients, and retail locations. From cabling and wireless to websites, AI automation, content, and edge/IoT deployments, we deliver onsite field execution for practical growth.')
     rendered = rendered.replace('{{INDUSTRY_FOCUS_TEXT}}', 'Enterprise IT & Infrastructure')
     rendered = rendered.replace('{{PHONE_DISPLAY}}', PHONE_DISPLAY)
     rendered = rendered.replace('{{PHONE_LINK}}', PHONE_LINK)
