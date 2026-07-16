@@ -65,7 +65,7 @@ def render_page(template, city):
     rendered = rendered.replace('"addressLocality":"Chicago"', f'"addressLocality":"{city["name"]}"')
     rendered = rendered.replace('"name":"Chicago"},"hasOfferCatalog"', f'"name":"{city["name"]}"}},"hasOfferCatalog"')
     rendered = rendered.replace('Chicago’s onsite infrastructure partner', f'{city["name"]} onsite infrastructure partner')
-    rendered = rendered.replace('Infrastructure work that <em>keeps business moving.</em>', city['hero_heading'])
+    rendered = rendered.replace('Infrastructure, websites, and automation that <em>keep business moving.</em>', city['hero_heading'])
     rendered = rendered.replace('From a single network closet to a new website launch, we put skilled technicians and builders on the ground to support Chicago businesses and residents with IT, AI automation, and content work that actually ships.', city['hero_subtitle'])
     rendered = rendered.replace('across the Chicago metro.', f'across {city["name"]} and the Chicago metro.')
     rendered = rendered.replace('Chicago metro coverage, ready to deploy.', f'{city["name"]} coverage, ready to deploy.')
