@@ -178,5 +178,245 @@
     "hero_heading": "Enterprise IT Infrastructure Services in Cicero IL",
     "hero_subtitle": "Cicero's dense industrial township supports heavy manufacturing, logistics staging, and commercial operations requiring enterprise-grade connectivity. Chicago Network Pros provides industrial networking, structured cabling, and technology deployment for facilities demanding maximum uptime.",
     "industry_focus": "Heavy Industrial & Manufacturing IT"
+  },
+  {
+    "name": "Skokie",
+    "slug": "skokie",
+    "profile": "Corporate/Tech",
+    "county": "Cook",
+    "meta_desc": "Enterprise IT infrastructure services in Skokie IL. Network deployment, structured cabling, wireless, and AV solutions for corporate offices, healthcare, and retail environments.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Skokie IL",
+    "hero_subtitle": "Skokie's mix of office buildings, retail corridors, and medical facilities needs dependable IT infrastructure. Chicago Network Pros delivers structured cabling, wireless deployment, and network support for North Shore businesses.",
+    "industry_focus": "North Shore Business IT"
+  },
+  {
+    "name": "Niles",
+    "slug": "niles",
+    "profile": "Corporate/Tech",
+    "county": "Cook",
+    "meta_desc": "Enterprise IT infrastructure services in Niles IL. Structured cabling, wireless deployment, and networking for office parks, retail, and light industrial properties.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Niles IL",
+    "hero_subtitle": "Niles sits in a busy North Cook County corridor where offices, retail centers, and service businesses all rely on stable connectivity. Our technicians build and support the cabling and network layers that keep those sites running.",
+    "industry_focus": "North Cook County Business IT"
+  },
+  {
+    "name": "Park Ridge",
+    "slug": "park-ridge",
+    "profile": "Corporate/Tech",
+    "county": "Cook",
+    "meta_desc": "Enterprise IT infrastructure services in Park Ridge IL. Network deployment, cabling, wireless, and technology support for commercial and professional office spaces.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Park Ridge IL",
+    "hero_subtitle": "Park Ridge's professional offices and community business centers benefit from clean, dependable IT buildouts. Chicago Network Pros provides field-ready cabling, wireless, and networking support for local organizations.",
+    "industry_focus": "Professional Office IT"
+  },
+  {
+    "name": "Morton Grove",
+    "slug": "morton-grove",
+    "profile": "Corporate/Tech",
+    "county": "Cook",
+    "meta_desc": "Enterprise IT infrastructure services in Morton Grove IL. Structured cabling, networking, wireless, and AV for office and light industrial facilities.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Morton Grove IL",
+    "hero_subtitle": "Morton Grove's blend of business parks and industrial sites requires flexible field service coverage. We deploy structured cabling, wireless, and network infrastructure for commercial properties across the village.",
+    "industry_focus": "Business Park IT"
+  },
+  {
+    "name": "Glenview",
+    "slug": "glenview",
+    "profile": "Corporate/Tech",
+    "county": "Cook",
+    "meta_desc": "Enterprise IT infrastructure services in Glenview IL. Data cabling, wireless deployment, and networking for corporate offices and campus environments.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Glenview IL",
+    "hero_subtitle": "Glenview's corporate offices, healthcare providers, and campus-style facilities need polished IT infrastructure work. Chicago Network Pros supports those environments with dependable field execution and fast turnaround.",
+    "industry_focus": "Corporate Campus IT"
+  },
+  {
+    "name": "Northbrook",
+    "slug": "northbrook",
+    "profile": "Corporate/Tech",
+    "county": "Cook",
+    "meta_desc": "Enterprise IT infrastructure services in Northbrook IL. Structured cabling, wireless, networking, and AV solutions for corporate headquarters and office parks.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Northbrook IL",
+    "hero_subtitle": "Northbrook's headquarters, office parks, and professional services firms rely on stable infrastructure. Our teams deliver network buildouts, cabling, and wireless coverage for North Shore enterprises.",
+    "industry_focus": "North Shore Corporate IT"
+  },
+  {
+    "name": "Buffalo Grove",
+    "slug": "buffalo-grove",
+    "profile": "Corporate/Tech",
+    "county": "Lake/Cook",
+    "meta_desc": "Enterprise IT infrastructure services in Buffalo Grove IL. Network deployment, cabling, wireless, and AV for business parks and office environments.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Buffalo Grove IL",
+    "hero_subtitle": "Buffalo Grove's mix of office parks, medical offices, and business campuses needs reliable IT infrastructure partners. Chicago Network Pros handles field deployment across the northwest suburban corridor.",
+    "industry_focus": "Northwest Suburban Office IT"
+  },
+  {
+    "name": "Mount Prospect",
+    "slug": "mount-prospect",
+    "profile": "Corporate/Tech",
+    "county": "Cook",
+    "meta_desc": "Enterprise IT infrastructure services in Mount Prospect IL. Structured cabling, networking, wireless, and technology support for commercial properties.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Mount Prospect IL",
+    "hero_subtitle": "Mount Prospect's offices, retail sites, and mixed-use properties benefit from responsive on-site IT work. We provide structured cabling, wireless, and network upgrades for businesses across the suburb.",
+    "industry_focus": "Commercial Office IT"
+  },
+  {
+    "name": "Elmhurst",
+    "slug": "elmhurst",
+    "profile": "Corporate/Tech",
+    "county": "DuPage",
+    "meta_desc": "Enterprise IT infrastructure services in Elmhurst IL. Network deployment, structured cabling, wireless, and AV for corporate and professional offices.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Elmhurst IL",
+    "hero_subtitle": "Elmhurst's downtown business district and regional offices require neat, reliable infrastructure work. Chicago Network Pros delivers cabling, networking, and wireless support for professional environments throughout DuPage County.",
+    "industry_focus": "DuPage Office IT"
+  },
+  {
+    "name": "Lombard",
+    "slug": "lombard",
+    "profile": "Corporate/Tech",
+    "county": "DuPage",
+    "meta_desc": "Enterprise IT infrastructure services in Lombard IL. Structured cabling, wireless deployment, and networking for office parks, retail, and campus facilities.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Lombard IL",
+    "hero_subtitle": "Lombard's commercial corridors and office parks need fast, clean IT field service. Our team supports network upgrades, structured cabling, and wireless coverage throughout central DuPage County.",
+    "industry_focus": "Commercial Corridor IT"
+  },
+  {
+    "name": "Villa Park",
+    "slug": "villa-park",
+    "profile": "Corporate/Tech",
+    "county": "DuPage",
+    "meta_desc": "Enterprise IT infrastructure services in Villa Park IL. Cabling, networking, wireless, and AV deployment for business properties and office spaces.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Villa Park IL",
+    "hero_subtitle": "Villa Park's small business centers and office spaces need dependable infrastructure execution. Chicago Network Pros handles cabling, network work, and wireless rollout across the western suburbs.",
+    "industry_focus": "Small Business & Office IT"
+  },
+  {
+    "name": "Wheaton",
+    "slug": "wheaton",
+    "profile": "Corporate/Tech",
+    "county": "DuPage",
+    "meta_desc": "Enterprise IT infrastructure services in Wheaton IL. Structured cabling, wireless deployment, and networking for offices, institutions, and commercial facilities.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Wheaton IL",
+    "hero_subtitle": "Wheaton's institutional and professional properties need well-managed IT infrastructure work. We support offices, campuses, and commercial sites with structured cabling and field deployment services.",
+    "industry_focus": "Institutional & Office IT"
+  },
+  {
+    "name": "Lisle",
+    "slug": "lisle",
+    "profile": "Corporate/Tech",
+    "county": "DuPage",
+    "meta_desc": "Enterprise IT infrastructure services in Lisle IL. Data cabling, wireless, networking, and AV for office parks and corporate campuses.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Lisle IL",
+    "hero_subtitle": "Lisle's office parks and corporate campuses are built for enterprise operations, and they need infrastructure work to match. Chicago Network Pros delivers cabling, network deployment, and wireless coverage for those environments.",
+    "industry_focus": "Office Park IT"
+  },
+  {
+    "name": "Westmont",
+    "slug": "westmont",
+    "profile": "Corporate/Tech",
+    "county": "DuPage",
+    "meta_desc": "Enterprise IT infrastructure services in Westmont IL. Structured cabling, networking, wireless, and technology deployment for commercial properties.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Westmont IL",
+    "hero_subtitle": "Westmont's commercial districts and office buildings benefit from a responsive field partner. We provide structured cabling, wireless installs, and network support across the western suburbs.",
+    "industry_focus": "Commercial Office IT"
+  },
+  {
+    "name": "Hinsdale",
+    "slug": "hinsdale",
+    "profile": "Corporate/Tech",
+    "county": "DuPage",
+    "meta_desc": "Enterprise IT infrastructure services in Hinsdale IL. Network deployment, structured cabling, wireless, and AV solutions for professional offices and residences.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Hinsdale IL",
+    "hero_subtitle": "Hinsdale's professional offices and high-end properties need discreet, polished IT infrastructure execution. Chicago Network Pros supports local businesses with cabling, networking, and wireless work.",
+    "industry_focus": "Professional Services IT"
+  },
+  {
+    "name": "Oak Lawn",
+    "slug": "oak-lawn",
+    "profile": "Logistics/Industrial",
+    "county": "Cook",
+    "meta_desc": "Enterprise IT infrastructure services in Oak Lawn IL. Structured cabling, networking, wireless, and technology support for healthcare, retail, and business sites.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Oak Lawn IL",
+    "hero_subtitle": "Oak Lawn's healthcare, retail, and service businesses need dependable connectivity across multiple sites. We deliver structured cabling, network upgrades, and wireless deployment for South Suburban organizations.",
+    "industry_focus": "Healthcare & Commercial IT"
+  },
+  {
+    "name": "Orland Park",
+    "slug": "orland-park",
+    "profile": "Logistics/Industrial",
+    "county": "Cook/Will",
+    "meta_desc": "Enterprise IT infrastructure services in Orland Park IL. Cabling, networking, wireless, and AV deployment for retail, healthcare, and office properties.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Orland Park IL",
+    "hero_subtitle": "Orland Park's retail centers, office spaces, and medical campuses need solid infrastructure partners. Chicago Network Pros provides field service support for networking, cabling, and wireless rollout.",
+    "industry_focus": "South Suburban Commercial IT"
+  },
+  {
+    "name": "Tinley Park",
+    "slug": "tinley-park",
+    "profile": "Logistics/Industrial",
+    "county": "Cook/Will",
+    "meta_desc": "Enterprise IT infrastructure services in Tinley Park IL. Structured cabling, networking, wireless, and technology support for business parks and logistics sites.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Tinley Park IL",
+    "hero_subtitle": "Tinley Park's business parks and commercial districts need dependable infrastructure for daily operations. We deliver cabling, network support, and wireless deployment for Southland businesses.",
+    "industry_focus": "Business Park IT"
+  },
+  {
+    "name": "Palatine",
+    "slug": "palatine",
+    "profile": "Corporate/Tech",
+    "county": "Cook",
+    "meta_desc": "Enterprise IT infrastructure services in Palatine IL. Network deployment, cabling, wireless, and AV solutions for office parks and commercial sites.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Palatine IL",
+    "hero_subtitle": "Palatine's office parks, retail centers, and commercial tenants need responsive IT field crews. Chicago Network Pros supports the northwest suburbs with structured cabling and network work.",
+    "industry_focus": "Northwest Suburban Office IT"
+  },
+  {
+    "name": "Carol Stream",
+    "slug": "carol-stream",
+    "profile": "Logistics/Industrial",
+    "county": "DuPage",
+    "meta_desc": "Enterprise IT infrastructure services in Carol Stream IL. Warehouse networking, structured cabling, wireless, and industrial technology deployment.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Carol Stream IL",
+    "hero_subtitle": "Carol Stream's warehouse and business park footprint relies on strong infrastructure for logistics and operations. We deliver industrial networking, cabling, and wireless support across DuPage County.",
+    "industry_focus": "Warehouse & Business Park IT"
+  },
+  {
+    "name": "Addison",
+    "slug": "addison",
+    "profile": "Corporate/Tech",
+    "county": "DuPage",
+    "meta_desc": "Enterprise IT infrastructure services in Addison IL. Structured cabling, networking, wireless, and AV for office, retail, and light industrial spaces.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Addison IL",
+    "hero_subtitle": "Addison's industrial and commercial mix calls for practical, well-executed IT infrastructure. Chicago Network Pros supports local sites with cabling, network deployment, and wireless rollout.",
+    "industry_focus": "Commercial & Light Industrial IT"
+  },
+  {
+    "name": "Bensenville",
+    "slug": "bensenville",
+    "profile": "Logistics/Industrial",
+    "county": "DuPage/Cook",
+    "meta_desc": "Enterprise IT infrastructure services in Bensenville IL. Warehouse networking, industrial cabling, and technology deployment near O'Hare.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Bensenville IL",
+    "hero_subtitle": "Bensenville's airport-adjacent logistics and industrial properties need fast, reliable infrastructure support. We provide warehouse networking, cabling, and edge deployment for local facilities.",
+    "industry_focus": "O'Hare Logistics IT"
+  },
+  {
+    "name": "Franklin Park",
+    "slug": "franklin-park",
+    "profile": "Logistics/Industrial",
+    "county": "Cook",
+    "meta_desc": "Enterprise IT infrastructure services in Franklin Park IL. Industrial networking, cabling, wireless, and technology support for freight and manufacturing sites.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Franklin Park IL",
+    "hero_subtitle": "Franklin Park's freight, manufacturing, and warehouse operations need rugged IT infrastructure. Chicago Network Pros delivers industrial cabling, network deployment, and wireless coverage for working facilities.",
+    "industry_focus": "Freight & Manufacturing IT"
+  },
+  {
+    "name": "Bridgeview",
+    "slug": "bridgeview",
+    "profile": "Logistics/Industrial",
+    "county": "Cook",
+    "meta_desc": "Enterprise IT infrastructure services in Bridgeview IL. Structured cabling, networking, wireless, and AV deployment for commercial and industrial properties.",
+    "hero_heading": "Enterprise IT Infrastructure Services in Bridgeview IL",
+    "hero_subtitle": "Bridgeview's commercial and industrial properties need reliable field support for fast-moving operations. We provide structured cabling, network work, and wireless installs throughout the area.",
+    "industry_focus": "Industrial & Commercial IT"
   }
 ]
