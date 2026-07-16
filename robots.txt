@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://chicagonetworkpros.github.io/sitemap.xml
