@@ -24,6 +24,30 @@ SITE_URL = 'https://chicagonetworkpros.github.io'
 PHONE_DISPLAY = '773-697-1292'
 PHONE_LINK = '7736971292'
 COPYRIGHT_YEAR = str(datetime.now().year)
+ABOUT_COPY = (
+    "Chicago Network Pros is a Chicago-based field services partner focused on infrastructure, websites, AI automation, content, and practical technology support for businesses, property teams, and residents."
+)
+CONTACT_COPY = (
+    "Use the number or email below to start a project, request help, or ask about service coverage."
+)
+FAQ_ITEMS = [
+    (
+        "Do you work with businesses and residents?",
+        "Yes. We support Chicago-area businesses, property teams, and residents with infrastructure, websites, automation, content, and tech help.",
+    ),
+    (
+        "What services do you offer?",
+        "We handle network cabling, website design, AI automation, content creation, security cameras, VoIP systems, support and maintenance, and more.",
+    ),
+    (
+        "What area do you cover?",
+        "We cover Chicago and roughly a 50-mile radius around the city, including nearby suburbs and business corridors.",
+    ),
+    (
+        "How do I start a project?",
+        "Call or email us with a short description of what you need, and we’ll help scope the work and plan the next step.",
+    ),
+]
 
 SERVICE_PAGES = [
     {
@@ -244,6 +268,121 @@ def render_service_page(service):
 </html>"""
 
 
+def render_about_page():
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicago Network Pros | About</title>
+  <meta name="description" content="{ABOUT_COPY}">
+  <link rel="canonical" href="{SITE_URL}/about/">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body{{margin:0;font-family:Inter,Arial,sans-serif;background:#171717;color:#f6f6f6}}.wrap{{width:min(980px,calc(100% - 40px));margin:auto}}header,footer{{border-color:#2a2a2a;border-style:solid}}header{{padding:22px 0;border-width:0 0 1px}}footer{{padding:28px 0;border-width:1px 0 0;color:#868686;font-size:12px}}a{{color:inherit;text-decoration:none}}.eyebrow{{font:500 11px 'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#3ecf8e}}h1{{font-size:clamp(40px,6vw,72px);letter-spacing:-.07em;line-height:.98;margin:16px 0 18px}}p{{font-size:17px;line-height:1.7;color:#b9b9b9}}.card{{border:1px solid #2a2a2a;background:#1b1b1b;border-radius:14px;padding:24px;margin-top:28px}}.grid{{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}}.grid div{{padding:16px;border:1px solid #2a2a2a;border-radius:10px;background:#1f1f1f}}@media(max-width:700px){{.grid{{grid-template-columns:1fr}}}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><a href="{SITE_URL}/" style="font-weight:800">Chicago Network Pros</a></div></header>
+  <main class="wrap">
+    <section style="padding:76px 0 34px">
+      <div class="eyebrow">About</div>
+      <h1>Built for infrastructure, digital work, and practical support.</h1>
+      <p>{ABOUT_COPY}</p>
+      <div class="card">
+        <strong>What we focus on</strong>
+        <div class="grid">
+          <div>Network cabling and field infrastructure</div>
+          <div>Website design and content creation</div>
+          <div>AI automation and workflow help</div>
+          <div>Support for businesses and residents</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">© {COPYRIGHT_YEAR} Chicago Network Pros</div></footer>
+</body>
+</html>"""
+
+
+def render_contact_page():
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicago Network Pros | Contact</title>
+  <meta name="description" content="{CONTACT_COPY}">
+  <link rel="canonical" href="{SITE_URL}/contact/">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body{{margin:0;font-family:Inter,Arial,sans-serif;background:#171717;color:#f6f6f6}}.wrap{{width:min(860px,calc(100% - 40px));margin:auto}}header,footer{{border-color:#2a2a2a;border-style:solid}}header{{padding:22px 0;border-width:0 0 1px}}footer{{padding:28px 0;border-width:1px 0 0;color:#868686;font-size:12px}}a{{color:inherit;text-decoration:none}}.eyebrow{{font:500 11px 'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#3ecf8e}}h1{{font-size:clamp(40px,6vw,72px);letter-spacing:-.07em;line-height:.98;margin:16px 0 18px}}p{{font-size:17px;line-height:1.7;color:#b9b9b9}}.card{{border:1px solid #2a2a2a;background:#1b1b1b;border-radius:14px;padding:24px;margin-top:28px}}.buttons{{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}}.button{{display:inline-flex;align-items:center;padding:13px 18px;border-radius:7px;font-weight:700}}.primary{{background:#3ecf8e;color:#092518}}.secondary{{border:1px solid #424242}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><a href="{SITE_URL}/" style="font-weight:800">Chicago Network Pros</a></div></header>
+  <main class="wrap">
+    <section style="padding:76px 0 34px">
+      <div class="eyebrow">Contact</div>
+      <h1>Talk to us about the next project.</h1>
+      <p>{CONTACT_COPY}</p>
+      <div class="card">
+        <p style="margin:0 0 10px"><strong>Phone:</strong> <a href="tel:{PHONE_LINK}">{PHONE_DISPLAY}</a></p>
+        <p style="margin:0 0 10px"><strong>Email:</strong> <a href="mailto:dispatch@chicagonetworkpros.com">dispatch@chicagonetworkpros.com</a></p>
+        <p style="margin:0"><strong>Coverage:</strong> Chicago and roughly a 50-mile radius around the city</p>
+        <div class="buttons">
+          <a class="button primary" href="tel:{PHONE_LINK}">Call now</a>
+          <a class="button secondary" href="mailto:dispatch@chicagonetworkpros.com">Email dispatch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">© {COPYRIGHT_YEAR} Chicago Network Pros</div></footer>
+</body>
+</html>"""
+
+
+def render_faq_page():
+    items = "".join(
+        f"<div><strong>{q}</strong><p>{a}</p></div>" for q, a in FAQ_ITEMS
+    )
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicago Network Pros | FAQ</title>
+  <meta name="description" content="Answers about Chicago Network Pros services, coverage, and how to start a project.">
+  <link rel="canonical" href="{SITE_URL}/faq/">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body{{margin:0;font-family:Inter,Arial,sans-serif;background:#171717;color:#f6f6f6}}.wrap{{width:min(960px,calc(100% - 40px));margin:auto}}header,footer{{border-color:#2a2a2a;border-style:solid}}header{{padding:22px 0;border-width:0 0 1px}}footer{{padding:28px 0;border-width:1px 0 0;color:#868686;font-size:12px}}a{{color:inherit;text-decoration:none}}.eyebrow{{font:500 11px 'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#3ecf8e}}h1{{font-size:clamp(40px,6vw,72px);letter-spacing:-.07em;line-height:.98;margin:16px 0 18px}}p{{font-size:16px;line-height:1.7;color:#b9b9b9}}.grid{{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:28px 0 0}}.grid div{{padding:18px;border:1px solid #2a2a2a;border-radius:12px;background:#1f1f1f}}.grid strong{{display:block;margin-bottom:10px;color:#fff}}@media(max-width:700px){{.grid{{grid-template-columns:1fr}}}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><a href="{SITE_URL}/" style="font-weight:800">Chicago Network Pros</a></div></header>
+  <main class="wrap">
+    <section style="padding:76px 0 34px">
+      <div class="eyebrow">FAQ</div>
+      <h1>Quick answers for people and search engines.</h1>
+      <p>These are the questions we expect people to ask most often before they reach out.</p>
+      <div class="grid">{items}</div>
+    </section>
+  </main>
+  <footer><div class="wrap">© {COPYRIGHT_YEAR} Chicago Network Pros</div></footer>
+</body>
+</html>"""
+
+
 def generate_sitemap(cities):
     """Generate sitemap.xml with all pages."""
     today = datetime.now().strftime('%Y-%m-%d')
@@ -273,6 +412,15 @@ def generate_sitemap(cities):
     <lastmod>{today}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>''')
+
+    # Info pages
+    for slug in ('about', 'contact', 'faq'):
+        urls.append(f'''  <url>
+    <loc>{SITE_URL}/{slug}/</loc>
+    <lastmod>{today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>''')
     
     sitemap = f'''<?xml version="1.0" encoding="UTF-8"?>
@@ -318,15 +466,36 @@ def main():
         with open(page_path, 'w', encoding='utf-8') as f:
             f.write(render_service_page(service))
         print(f"✅ /services/{service['slug']}/index.html — {service['title']}")
+
+    # Generate information pages
+    info_pages = {
+        'about': render_about_page(),
+        'contact': render_contact_page(),
+        'faq': render_faq_page(),
+    }
+    for slug, html in info_pages.items():
+        page_dir = os.path.join(OUTPUT_DIR, slug)
+        os.makedirs(page_dir, exist_ok=True)
+        with open(os.path.join(page_dir, 'index.html'), 'w', encoding='utf-8') as f:
+            f.write(html)
+        print(f"✅ /{slug}/index.html")
+
+    robots = f"""User-agent: *
+Allow: /
+Sitemap: {SITE_URL}/sitemap.xml
+"""
+    with open(os.path.join(OUTPUT_DIR, 'robots.txt'), 'w', encoding='utf-8') as f:
+        f.write(robots)
+    print("✅ robots.txt generated")
     
     # Generate sitemap
     sitemap = generate_sitemap(cities)
     sitemap_path = os.path.join(OUTPUT_DIR, 'sitemap.xml')
     with open(sitemap_path, 'w', encoding='utf-8') as f:
         f.write(sitemap)
-    print(f"\n🗺️  sitemap.xml generated with {len(cities) + len(SERVICE_PAGES) + 1} URLs")
+    print(f"\n🗺️  sitemap.xml generated with {len(cities) + len(SERVICE_PAGES) + 4 + 1} URLs")
     
-    print(f"\n🎉 Build complete! {len(cities) + len(SERVICE_PAGES) + 1} pages generated.")
+    print(f"\n🎉 Build complete! {len(cities) + len(SERVICE_PAGES) + 4 + 1} pages generated.")
 
 
 if __name__ == '__main__':
