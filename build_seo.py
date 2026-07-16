@@ -6,13 +6,16 @@ Generates localized landing pages from template + city data.
 
 import json
 import os
+import re
 import shutil
 from datetime import datetime
 
 # Paths
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SRC_DIR = os.path.join(BASE_DIR, 'src')
-TEMPLATE_PATH = os.path.join(SRC_DIR, 'template.html')
+# City pages inherit the production homepage design so that the visual system
+# stays consistent as the site evolves.
+TEMPLATE_PATH = os.path.join(BASE_DIR, 'index.html')
 DATA_PATH = os.path.join(SRC_DIR, 'data_cities.json')
 OUTPUT_DIR = BASE_DIR  # Output to repo root for GitHub Pages
 
@@ -36,23 +39,35 @@ def load_cities():
 
 
 def render_page(template, city):
-    """Render a page by replacing template placeholders with city data."""
+    """Render a localized city page from the production homepage design."""
     canonical = f"{SITE_URL}/{city['slug']}/"
-    
+
     rendered = template
-    rendered = rendered.replace('{{CITY_NAME}}', city['name'])
-    rendered = rendered.replace('{{CITY_STATE}}', 'IL')
-    rendered = rendered.replace('{{PAGE_TITLE}}', f"Chicago Network Pros | Enterprise IT & Network Infrastructure Services in {city['name']} IL")
-    rendered = rendered.replace('{{META_DESC}}', city['meta_desc'])
-    rendered = rendered.replace('{{CANONICAL_URL}}', canonical)
-    rendered = rendered.replace('{{AREA_SERVED_CITY}}', city['name'])
-    rendered = rendered.replace('{{HERO_HEADING}}', city['hero_heading'])
-    rendered = rendered.replace('{{HERO_SUBTITLE}}', city['hero_subtitle'])
-    rendered = rendered.replace('{{INDUSTRY_FOCUS_TEXT}}', city['industry_focus'])
-    rendered = rendered.replace('{{PHONE_DISPLAY}}', PHONE_DISPLAY)
-    rendered = rendered.replace('{{PHONE_LINK}}', PHONE_LINK)
-    rendered = rendered.replace('{{COPYRIGHT_YEAR}}', COPYRIGHT_YEAR)
-    
+    title = f"Chicago Network Pros | Enterprise IT Infrastructure Services in {city['name']} IL"
+    keywords = (
+        f"{city['name']} IT services, enterprise IT {city['name']} IL, "
+        f"structured cabling {city['name']}, fiber optic installation {city['name']}, "
+        f"low voltage cabling {city['name']}, Wi-Fi installation {city['name']}, "
+        f"network switch installation {city['name']}, smart hands {city['name']}, "
+        f"IT field services {city['name']}, Chicago Network Pros"
+    )
+    rendered = re.sub(r'<title>.*?</title>', f'<title>{title}</title>', rendered, count=1)
+    rendered = re.sub(r'<meta name="description" content=".*?">', f'<meta name="description" content="{city["meta_desc"]}">', rendered, count=1)
+    rendered = re.sub(r'<meta name="keywords" content=".*?">', f'<meta name="keywords" content="{keywords}">', rendered, count=1)
+    rendered = rendered.replace('<link rel="canonical" href="https://chicagonetworkpros.github.io/">', f'<link rel="canonical" href="{canonical}">')
+    rendered = re.sub(r'<meta property="og:title" content=".*?">', f'<meta property="og:title" content="{title}">', rendered, count=1)
+    rendered = re.sub(r'<meta property="og:description" content=".*?">', f'<meta property="og:description" content="{city["meta_desc"]}">', rendered, count=1)
+    rendered = rendered.replace('<meta property="og:url" content="https://chicagonetworkpros.github.io/">', f'<meta property="og:url" content="{canonical}">')
+    rendered = rendered.replace('"url":"https://chicagonetworkpros.github.io/"', f'"url":"{canonical}"')
+    rendered = rendered.replace('"addressLocality":"Chicago"', f'"addressLocality":"{city["name"]}"')
+    rendered = rendered.replace('"name":"Chicago"},"hasOfferCatalog"', f'"name":"{city["name"]}"}},"hasOfferCatalog"')
+    rendered = rendered.replace('Chicago’s onsite infrastructure partner', f'{city["name"]} onsite infrastructure partner')
+    rendered = rendered.replace('Infrastructure work that <em>keeps business moving.</em>', city['hero_heading'])
+    rendered = rendered.replace('From a single network closet to a multi-site rollout, we put skilled technicians on the ground to build, upgrade, and support your critical IT environment.', city['hero_subtitle'])
+    rendered = rendered.replace('across the Chicago metro.', f'across {city["name"]} and the Chicago metro.')
+    rendered = rendered.replace('Chicago metro coverage, ready to deploy.', f'{city["name"]} coverage, ready to deploy.')
+    rendered = rendered.replace('throughout Chicagoland.', f'throughout {city["name"]} and Chicagoland.')
+    rendered = rendered.replace('CHICAGO, IL · ENTERPRISE FIELD SERVICES', f'{city["name"].upper()}, IL · ENTERPRISE FIELD SERVICES')
     return rendered
 
 
@@ -117,13 +132,6 @@ def main():
     print(f"📄 Template loaded ({len(template)} chars)")
     print(f"🏙️  {len(cities)} cities loaded")
     print()
-    
-    # Generate root index.html
-    root_html = render_root_page(template)
-    root_path = os.path.join(OUTPUT_DIR, 'index.html')
-    with open(root_path, 'w', encoding='utf-8') as f:
-        f.write(root_html)
-    print(f"✅ Root: /index.html")
     
     # Generate city pages
     for city in cities:
